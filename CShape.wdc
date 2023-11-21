@@ -1,0 +1,184 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : CShape
+ major_version : 28
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x10ebe48c027c083e
+ internal_properties : CAAAAAgAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  internal_properties : CAAAAAgAAAB866eP4Ets4TTLMsshqEz3fUrTsqRNJyKDnG3Fh2I4G2j/gv1+ctrBQKEsIohDsPZ15m8aTDv/o82gJIt8op0fGoBvBA==
+  type_code : 10
+  p_codes :
+   -
+     code : |1-
+      CShape is Class
+      	
+      	m_XRot, m_YRot, m_ZRot are reals
+      	m_XTrans, m_yTrans, m_zTrans are reals
+      	m_R, m_V, m_B are reals
+      	
+      	CONSTANT
+      		GL_TEXTURE_2D = 3553 
+      		GL_UNSIGNED_BYTE = 5121
+      		GL_TEXTURE_MIN_FILTER = 10241
+      		GL_RGBA = 6408
+      		GL_LINEAR = 9729
+      		GL_TEXTURE_MAG_FILTER = 10240 
+      		GL_QUADS = 0x0007
+      	END
+      END
+     type : 131072
+  procedures :
+   -
+     name : Constructor
+     internal_properties : CAAAAAgAAADrlXDPVe1U7iohFAckfSdXqImrLIMvwiz9o9bnVB/XPoDCXfMMVLEvnmkf5hEzFBS02Hted0NDQt6dtRtwd9+d6aPgOeluNIDahO2p1zbbxZCUf+kmr7Kj/wi7xT2RQ+ErUN18ACe2umb+S01LEUhhAHbG8PI2ubiv69yqPIJjmWdISOlenlF7i6hLhY8RKUFcSImHOefQZbUBE4QYx0/FcH02Y6abIe/J76R3BQRfJijozuMhR6JAeZOjuNG4ZcZQP2tdHiEg6fHva6/SELlrB51AKfDEAphnHCpoPrQwF6hO52LGWAr2acZPX3QnkL2787rlaOCHO7tUqMe5xmTKR/yOjQ3kBt7/u3pk4A==
+     procedure_id : 1219319414122154046
+     type_code : 27
+     code : |1+
+      Procedure Constructor()
+      
+      :SetParam()
+      :SetRotation()
+      :SetTranslation()
+      :SetColor()
+     type : 589824
+   -
+     name : Destructor
+     procedure_id : 1219319414122219582
+     type_code : 28
+     code : |1+
+      Procedure Destructor()
+      
+      
+     type : 655360
+   -
+     name : Draw
+     procedure_id : 1219319414122285118
+     type_code : 12
+     code : |1+
+      Procedure VIRTUAL Draw()
+      
+      
+     type : 458752
+   -
+     name : SetParam
+     procedure_id : 1219319414122350654
+     type_code : 12
+     code : |1+
+      Procedure VIRTUAL SetParam() <overload> 
+      
+      
+     type : 458752
+   -
+     name : SetColor
+     procedure_id : 1219319414122416190
+     type_code : 12
+     code : |1+
+      PROCEDURE SetColor(pnColor=RGB(255,255,255))
+      
+      // RGB separation
+      :m_R = modulo(pnColor, 256) /256
+      :m_V = modulo(pnColor/256, 256) /256
+      :m_B =modulo(pnColor/256/256, 256) /256
+     type : 458752
+   -
+     name : SetRotation
+     procedure_id : 1219319414122481726
+     type_code : 12
+     code : |1+
+      PROCEDURE SetRotation(pnX is real=0.0, pnY is real=0.0, pnZ is real=0.0)
+      
+      :m_XRot = pnX
+      :m_YRot = pnY
+      :m_ZRot = pnZ
+     type : 458752
+   -
+     name : SetTranslation
+     procedure_id : 1219319414122547262
+     type_code : 12
+     code : |1+
+      PROCEDURE SetTranslation(pnX is real=0.0, pnY is real=0.0, pnZ is real=0.0)
+      
+      :m_XTrans = pnX
+      :m_yTrans = pnY
+      :m_zTrans = pnZ
+     type : 458752
+   -
+     name : Move
+     internal_properties : CAAAAAgAAACc6RmY+gQytziMVPJTz4YKRfIjMgJtTbF9Eftr9My/FtwDtpjAb6xumc+E0ND9AeKmViYSLWLLYv+ypkkVTUkCmFd1nKrHw7niMdiHpBsXWsKcmrgQy5R7j+/fhYJ1AEHNW4kJYfF9cMkBvl7VHdCAolJExcmmyaB8MI1GtbyaeV9yGnEvI283oUbjFt9f8vs1REvJhcKicpd24pGHcOpMxHE6G8+FI3/2XHn4ck0aCOdEDRvBdaetniz65QdxZT9SRPV6mecECWh3weywXVITsqpqtM9Vbewemo96RLa86NI1j6vFg3sUbz2HqT7j2NTeFicAVb6hFoIghBKHltQuu5LTMrs3OkVBfbSv7YzEhnqi5v61BFZHNJj+oW4zwk1Bq4plDe+M8aRYR0x8PJBPsW11gkEuRY+BB9LZcwxMVUE/1YJzA0jDWl3jPIzs+MWNVFcJOQ==
+     procedure_id : 1219319414122612798
+     type_code : 12
+     code : |1+
+      Procedure Move()
+      
+      // Relocation
+      API(“Opengl32.dll”, “glTranslated”, :m_XTrans, :m_yTrans, :m_zTrans)
+      
+      // Rotation
+      API(“Opengl32.dll”, “glRotated”, :m_XRot, 1.0,0.0,0.0)	// Rotation on X
+      API(“Opengl32.dll”, “glRotated”, :m_YRot, 0.0,1.0,0.0)	// Rotation on Y
+      API(“Opengl32.dll”, “glRotated”, :m_ZRot, 0.0,0.0,1.0)	// Rotation on Z
+     type : 458752
+   -
+     name : Colors
+     internal_properties : CAAAAAgAAACXC+mSUO0RH1pElF6IHfgR8QD3gZOKEl71aUMRipCQ+EzNvR8ogVbBZ955xm4ioEm8WOxd+5gANzLeiNxbCTAjOsn5FJ0326fZzDtgQmoPxKHp7jY1fbcUF6MJEbCr5yYzjzuX3j3mII9LdKijyhGMxu8tRap1hLlJP6ugEJO6vx3QVBXMukka8Q4v2w0tzKgCBg==
+     procedure_id : 1219319414122678334
+     type_code : 12
+     code : |1+
+      Procedure Colors()
+      
+      // Color
+      API(“Opengl32.dll”, “glColor3d”, :m_R, :m_V, :m_B)
+     type : 458752
+   -
+     name : RotationCamera
+     internal_properties : CAAAAAgAAACieztOzC3OpHQLYgGOo5GFLNpbcd8Iw6G+ltj3AOxbCbBRQkfK9bCe8tmPVHLXSUrNfbCVh4csTfHDwfq1pmlcmquWxs3ud7qSNC5NNmw/+EDdrOS/7uQcmEJZPsBuNZJi9Hkc8q0E/5ZanFvJmbkaC/ZfxoL5/v7GnvVJnr8aWs5kOSgFbcr0bHJTnm1hnQ+PGW6k7RvGpStr3UwMhSFMk5BAvPD3obGnSUNBv5vpe5o=
+     procedure_id : 1219319414122743870
+     type_code : 12
+     code : |1+
+      Procedure RotationCamera(pnX is real, pnY is real, pnZ is real)
+      
+      // Rotation
+      API(“Opengl32.dll”, “glRotated”, pnX, 1.0,0.0,0.0)	// Rotation on X
+      API(“Opengl32.dll”, “glRotated”, pnY, 0.0,1.0,0.0)	// Rotation on Y
+      API(“Opengl32.dll”, “glRotated”, pnZ, 0.0,0.0,1.0)	// Rotation on Z
+      
+     type : 458752
+   -
+     name : TranslationCamera
+     internal_properties : CAAAAAgAAACXC+mSUO0RH1pElF6IHfgR8QD3gZOKEl71aUMRipCQ+EzNvR8ogVbBZ955xm4ioEm8WOxd+5gANzLeiNxbCTAjOsn5FJ0326fZzDtgQmoPxKHp7jY1fbcUF6MJEbCr5yYzjzuX3j3mII9LdKijyhGMxu8tRap1hLlJP6ugEJO6vx3QVBXMukka8Q4v2w0tzKgCBg==
+     procedure_id : 1219319414122809406
+     type_code : 12
+     code : |1+
+      Procedure TranslationCamera(pnX is real, pnY is real, pnZ is real)
+      
+      // Relocation
+      API(“Opengl32.dll”, “glTranslated”, pnX, pnY, pnZ)
+     type : 458752
+   -
+     name : ClearMatrice
+     internal_properties : CAAAAAgAAACXC+mSUO0RH1pElF6IHfgR8QD3gZOKEl71aUMRipCQ+EzNvR8ogVbBZ955xm4ioEm8WOxd+5gANzLeiNxbCTAjOsn5FJ0326fZzDtgQmoPxKHp7jY1fbcUF6MJEbCr5yYzjzuX3j3mII9LdKijyhGMxu8tRap1hLlJP6ugEJO6vx3QVBXMukka8Q4v2w0tzKgCBg==
+     procedure_id : 1219319414122874942
+     type_code : 12
+     code : |1-
+      Procedure ClearMatrice()
+      
+      // Initializes the matrix
+      API(“Opengl32.dll”, “glLoadIdentity”)	
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : CFigure
+resources :
+ string_res :
+  identifier : 0x3d49293016db8837
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

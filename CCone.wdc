@@ -1,0 +1,70 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : CCone
+ major_version : 28
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x3d4a46297ddc8f62
+ internal_properties : CAAAAAgAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  internal_properties : CAAAAAgAAAB866eP4Ets4TTLMsshqEz3fUrTsqRNJyKDnG3Fh2I4G2j/gv1+ctrBQKEsIohDsPZ15m8aTDv/o82gJIt8op0fGoBvBA==
+  type_code : 10
+  p_codes :
+   -
+     code : |1+
+      CCone is Class
+      	inhérits of CCylinder
+      END
+     type : 131072
+  procedures :
+   -
+     name : Constructor
+     procedure_id : 4416419528617070449
+     type_code : 27
+     code : |1+
+      Procedure Constructor()
+      Constructor CCylinder()
+     type : 589824
+   -
+     name : Destructor
+     procedure_id : 4416419526767513457
+     type_code : 28
+     code : |1+
+      Procedure Destructor()
+      
+     type : 655360
+   -
+     name : SetParam
+     internal_properties : CAAAAAgAAABVS3u7ngcbHQbuiCKSt+i5VZJXkXWESORRW3eZcI78rHS7DddSo0wnK3BtktgU0OHYWnjxTUI2kX4QZID9Y0RHktelKB/JkUE9EzR3y8E4S5KkFy1OZOBrNKpCmFkCkG3gXmj6e1CzsxDuSZOw7WKzo2bycI8IsUDebpS/+YrHAgoP2YBRdS7VMuEURp787ADARA==
+     procedure_id : 4416419528592691057
+     type_code : 12
+     code : |1+
+      Procedure VIRTUAL SetParam(pnBaseRadius is real=1.0, pnHeight is real =2.0, pnSlices is int = 16, pnStacks is int = 16) <overload> 
+      // pnBaseRadius: radius at the base
+      // pnHeight: Height
+      // pnSlices: Number of sub-divisions around the z axis
+      // pnStacks: Number of sub-divisions around the z axis
+      
+      // Properties of the object
+      :m_baseRadius = pnBaseRadius
+      :m_height 	  = pnHeight
+      :m_slices 	  = pnSlices
+      :m_stacks 	  = pnStacks
+      
+      // a cone is a cylinder whose radius is null at the top
+      :m_topRadius  = 0.0
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+resources :
+ string_res :
+  identifier : 0x3d49296c567f7381
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

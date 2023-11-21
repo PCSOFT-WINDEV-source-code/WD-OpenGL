@@ -1,0 +1,502 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : COpenGL
+ major_version : 28
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x3d465ea134212060
+ internal_properties : CAAAAAgAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  internal_properties : CAAAAAgAAABpYIM7PBsmpo7OfSQ6dqbg/Y7Vd5lEcwNmkfIjODwTQ8FviG2oFeY4dlddVQFMTXkyTVzlZjOdaPcQD7hmRPY81pmJ69TJGOdWekG7Btd1MYNcybWq+UAC1Uyeh8woB2Dz/Iz72UiNBVVALUPJS4V544FVSXb/MC21BYcdejIaSIpBtHywX7VT/Ra13XXHcHMcRA0yWn8QnKeZTJjKcv8IYiA8eupHcI67cw==
+  type_code : 10
+  p_codes :
+   -
+     internal_properties : CAAAAAgAAADrzQL1MV7y9o8MP/rkr9Dpo71svCgNQ1tPcpOAqLVv77G8Tlgz0HGNWEMjtCgGfV43mtrw4BTiNE6t2M2gMN50vUHEywXsWMgUnvLsFhI4Sls5iKP6K8Y3sBi9FNcBtySlRTfh4gfeRjQ214w=
+     code : |1+
+      // Initialization
+      PIXELFORMATDESCRIPTOR is Structure  
+      nSize is 2-byte int
+      nVersion is 2-byte int
+      dwFlags is 4-byte int
+      iPixelType  is 1-byte int
+      cColorBits is 1-byte int
+      cRedBits is 1-byte int
+      cRedShift is 1-byte int
+      cGreenBits is 1-byte int
+      cGreenShift is 1-byte int
+      cBlueBits is 1-byte int
+      cBlueShift is 1-byte int
+      cAlphaBits is 1-byte int
+      cAlphaShift is 1-byte int
+      cAccumBits is 1-byte int
+      cAccumRedBits is 1-byte int
+      cAccumGreenBits is 1-byte int
+      cAccumBlueBits is 1-byte int
+      cAccumAlphaBits is 1-byte int
+      cDepthBits is 1-byte int
+      cStencilBits is 1-byte int
+      cAuxBuffers is 1-byte int
+      iLayerType is 1-byte int
+      bReserved is 1-byte int
+      dwLayerMask is 4-byte int
+      dwVisibleMask is 4-byte int
+      dwDamageMask is 4-byte int
+      END
+      
+      COpenGL is Class
+      	m_sControl is string						// Name of the 3D control
+      	m_hdc is int							// Device context of the control
+      	m_hglrc is int						// OpenGL context
+      	m_xArrFigure is array dynamic 		// Array containing the 3D shapes
+      	m_nLastPosX, m_nLastPosY are int	// Last position of the mouse
+      	m_XCameraRot, m_YRotCamera, m_ZRotCamera are reals	// Rotation of the camera		
+      	m_XCameraTrans, m_YTransCamera, m_ZTransCamera are reals	// Rotation of the camera		
+      	
+      	CONSTANT
+      		GL_LIGHT0 = 0x4000
+      		GL_LIGHTING = 0x0B50
+      		GL_DEPTH_TEST = 0x0B71
+      		GL_PROJECTION = 5889
+      		GL_MODELVIEW = 0x1700
+      		GL_LEQUAL = 515
+      		GL_DEPTH_BUFFER_BIT = 0x100
+      		GL_COLOR_BUFFER_BIT = 0x4000
+      		GL_PERSPECTIVE_CORRECTION_HINT = 3152
+      		GL_NICEST = 4354
+      		GL_COLOR_MATERIAL = 2903
+      		GL_AMBIENT_AND_DIFFUSE = 5634
+      		GL_FACEFRONT = 1028
+      		PFD_DRAW_TO_WINDOW = 4
+      		PFD_SUPPORT_OPENGL = 32
+      		PFD_DOUBLEBUFFER = 1
+      		PFD_TYPE_RGBA = 0
+      		PFD_MAIN_PLANE = 0
+      		GL_DIFFUSE = 0x1201
+      		GL_POSITION = 0x1203
+      		GL_TEXTURE_2D = 3553 
+      		GL_UNSIGNED_BYTE = 5121
+      		GL_TEXTURE_MIN_FILTER = 10241
+      		GL_RGBA = 6408
+      		GL_NEAREST = 9728
+      		GL_LINEAR = 9729
+      		GL_TEXTURE_MAG_FILTER = 10240 
+      		GL_QUADS = 0x0007
+      		GL_SMOOTH = 0x1D01
+      		GL_COMPILE = 4864
+      	END
+      END
+      
+     type : 131072
+  procedures :
+   -
+     name : Constructor
+     internal_properties : CAAAAAgAAABuQQng1zx74TK+dtOUzBREFVEIaBO2kmi7W8cHkf+P23zSrBRHcBkaweebPd0ZVrF4RtBc946XUuEdZZDdYtl/6BotEJp10WcI6i9PcoEbkge22X+9q8RmcQIG2P/YWadx3KzKtOUDMofCjxnaBy1DKtgKzOwdQf+HLCrtdSNBFCADG5Gygk424otV3dc1C9e+pIk6z0yUzPoxm+cU3kna
+     procedure_id : 4415320530522415215
+     type_code : 27
+     code : |1+
+      Procedure Constructor(psControlName)
+      
+      // Load the DLLs
+      LoadDLL(“gdi32.dll”)
+      LoadDLL(“Opengl32.dll”)
+      
+      // Control where OpenGL will operate
+      :m_sControl = psControlName
+      
+      // Array containing the 3D shapes
+      :m_xArrFigure = new array dynamic of 0 CShape dynamic
+     type : 589824
+   -
+     name : Destructor
+     internal_properties : CAAAAAgAAAD2VS1QNGgU0Y9holZXQ7EQkKSF81v8f5aWZxzfmDiG0oSDOyaGBt5WPvQW/hqVH9i/am0yGmkZfGfIipXCRQjhdJ+OVthtbXgUOZeeIKfayTo2NACI89Y8vOibniStxSUSLo+DE4nFGlpE0uvFNh9VlxxRkSNNUY36JF/LbEZlbEHhkp4x5EzyxcXC+3bwu+SCIZeQF5X5s0p8gJH9f/U=
+     procedure_id : 4415320531991208047
+     type_code : 28
+     code : |1-
+      Procedure Destructor()
+      
+      WHEN EXCEPTION IN 
+      	// Free all the objects
+      	:DeleteFigure()
+      	
+      	// Free the memory
+      	API(“opengl32.dll”, “wglMakeCurrent”, Null, Null)
+      	API(“opengl32.dll”, “wglDeleteContext”,:m_hglrc)
+      	SysReleaseDC()
+      DO
+      	// nothing
+      END
+     type : 655360
+   -
+     name : InitControl
+     internal_properties : CAAAAAgAAABDxp3NmrQljJGTycV817jIsEQO0LGXmTklORAFUfvBUDicqfyh7TLHzPEUm8ciDfA7Au+SJZOmkWMDcmFaALJ0tqk7wBXhxYDOB8Hhus+CCKOp1RGA2cR2+VDJg8p7hwKGupYcDc/lZhQQs2TvDNHl123BfZpJTzFlj55McTUswGnjk27q8miFm4Fdvw0sDIdcRyKaCttAAP51BLv4qMVHfHIXfHGpGDOQj/grVNgZG1RmzQMEuilgsVRJwUlIMsbPQctawccSKuFwXkzFUtQSOAla2REXscgztzpWvMnIE/SgX4zTzBEN3RJdAMlwY7V+LwsyiCsTPnDdv+Q=
+     procedure_id : 4415320578263895450
+     type_code : 12
+     code : |1+
+      Procedure InitControl()
+      // Initialize the control where OpenGL will operate
+      
+      pfd is PIXELFORMATDESCRIPTOR
+      iPixelFormat is int
+      
+      // Device Context of the control used
+      :m_hdc = SysGetDC(Handle(:m_sControl))
+      IF :m_hdc=Null RESULT False
+      
+      // Define the pixel format
+      pfd:nSize = Dimension(pfd)
+      pfd:nVersion = 1
+      pfd:dwFlags = ::PFD_SUPPORT_OPENGL+::PFD_DRAW_TO_WINDOW+::PFD_DOUBLEBUFFER
+      pfd:iPixelType = ::PFD_TYPE_RGBA
+      pfd:cColorBits = 24
+      pfd:cDepthBits = 16
+      pfd:iLayerType = ::PFD_MAIN_PLANE
+      
+      // Assign the defined format
+      iPixelFormat = API(“gdi32.dll”, “ChoosePixelFormat”, :m_hdc, &pfd)
+      IF iPixelFormat = 0 THEN
+      	Error(<§$0000§>)
+      	RESULT False
+      END
+      IF NOT API(“gdi32.dll”, “SetPixelFormat”, :m_hdc, iPixelFormat, &pfd)
+      	Error(<§$0001§>)
+      	RESULT False
+      END
+      
+      // Create the OpenGL context
+      :m_hglrc = API(“opengl32.dll”, “wglCreateContext”, :m_hdc)
+      IF :m_hglrc=Null THEN
+      	Error(<§$0002§>+API(“Kernel32.dll”, “GetLastError”),“”, <§$0003§>, <§$0004§>, <§$0005§>, <§$0006§>, <§$0007§>)
+      	RESULT False
+      END
+      IF NOT API(“Opengl32.dll”, “wglMakeCurrent”, :m_hdc, :m_hglrc) THEN
+      	Error(“wglMakeCurrent failed”)
+      	RESULT False
+      END
+      
+      // At each repaint, ask OpenGL to redraw
+      Event(“:Draw”, :m_sControl, 15)  // WM_PAINT
+      
+      // Event to manage the PgUp and PgDown keys
+      Event(“:KeyPress”, “*.*”, 256) // WM_KEYDOWN
+      
+      // Event to manage the mouse wheel
+      Event(“:MouseWheel”, “*.*”, 0x020A)
+      
+      RESULT True
+     type : 458752
+   -
+     name : InitGL
+     internal_properties : CAAAAAgAAACQ8B9fNSfG7x416xYAMAc4WI39MW/8OKqa8xndIAq+yR5A2jIuGhV26Gu6L/GUUbcM6vgWoKR42jgIZziQtfuTplne8qBl9jL27EiK30ZzJz0PxnZ4rQZpBgsv5975SdCRjrJ25SUQKYZbZMu3v7nzQsu/OUUNPk9VHFsBz8cfJBFkRNtTvf8GlYm+ULD9meY1CATW7JUyvp3ius0cdj/I7c1i6w4w7wSaq6+AWBClLUi7EFJyOakpfhLigUonJM1LHEOqEXMmO/wmn5g2nhBimi11IV0sfnmUOh+FZnt8iUfJAAMYfmKJfalCfEGo2fk++itMsJVQiFBjnMQmzY8yHS2NWg==
+     procedure_id : 4416108008575072141
+     type_code : 12
+     code : |1-
+      Procedure InitGL()
+      // Initialize the different parameters (color, depth, lightness, texture)
+      
+      // Initialize the background color
+      n1,n2,n3,n4 are 4-byte real
+      n1=0.2;n2=0.2;n3=0.2;n4=1.0
+      API(“Opengl32.dll”, “glClearColor”, n1, n2, n3, n4) 
+      
+      // Color
+      API(“Opengl32.dll”, “glEnable”, ::GL_COLOR_MATERIAL)
+      API(“Opengl32.dll”, “glColorMaterial”, ::GL_FACEFRONT, ::GL_AMBIENT_AND_DIFFUSE)
+      
+      // Depth
+      API(“Opengl32.dll”, “glClearDepth”, 1.0 )			
+      API(“Opengl32.dll”, “glEnable”, ::GL_DEPTH_TEST)		
+      API(“Opengl32.dll”, “glDepthFunc”, ::GL_LEQUAL)	
+      
+      // Light
+      API(“Opengl32.dll”, “glEnable”, ::GL_LIGHTING)
+      API(“Opengl32.dll”, “glEnable”, ::GL_LIGHT0)
+      
+      // Improve the perspectives
+      API(“Opengl32.dll”, “glHint”, ::GL_PERSPECTIVE_CORRECTION_HINT, ::GL_NICEST)
+      
+      // Clears the buffer
+      API(“Opengl32.dll”, “glClear”, ::GL_COLOR_BUFFER_BIT+::GL_DEPTH_BUFFER_BIT)
+      
+      // Displays the described elements
+      :Displays()
+     type : 458752
+   -
+     name : InitScene
+     internal_properties : CAAAAAgAAACwW27q5oFCQIa3UqtrnqsCChbWg8IaPP/zTf4Z+pRbFWqy2PAkisQ1jOQGEzLvubeGzjdfjboqNdk0AKnhjQQm98rNOhq46a5u/st5HAOwopwGnsw5RnE1DBlR3EDb22xskURQ2aWRmB3s976otEiUyCg440sxxGtyUIrOl6hvzK2iWg9wlaQFVvZyj6LPW3BzCGJsiXCvQU44W2Scj+O/Y9PgxJT2FAcMVlUzQenRrWsFXfY+b4HZ1ZIqJT/SIG7xC6ZrHt4cJaa/rN28RELejLyy
+     procedure_id : 4416108326991305236
+     type_code : 12
+     code : |1+
+      Procedure InitScene()
+      // Initialize according to the dimensions of the control
+      
+      // Initialize the view according to the dimensions of the control
+      API(“Opengl32.dll”, “glViewport”, 0, 0, {:m_sControl,indControl}..Width, {:m_sControl,indControl}..Height) 
+      // Matrix used
+      API(“Opengl32.dll”, “glMatrixMode”, ::GL_PROJECTION)      
+      // Initialize the matrix
+      API(“Opengl32.dll”, “glLoadIdentity”)						
+      
+      // Calculate the Width/Height ratio of the control
+      API(“Glu32.dll”, “gluPerspective”, 45.0, {:m_sControl,indControl}..Width/{:m_sControl,indControl}..Height, 0.1, 100.0)
+      
+      // Matrix used
+      API(“Opengl32.dll”, “glMatrixMode”, ::GL_MODELVIEW)   
+      
+      // Initialize the matrix
+      API(“Opengl32.dll”, “glLoadIdentity”)
+     type : 458752
+   -
+     name : Draw
+     internal_properties : CAAAAAgAAACOsg7qyER2OU9jt3igs5Btyu/mx7l06c5GXxakPRXRUIswKLVBBVWkY75xL83fJwIDACBS4HgoD75NzqeFeojh32HQBzDZa3dhVmCI5ZpeX+UD7fbYZkxWF6EwkUPtrDf5beKzKTZXJu3LDbZsfpo9DPFS76tga8eX956QRYFvRP/e0Vnd9TjSRby6r1X5IFvK
+     procedure_id : 4416115169411754141
+     type_code : 12
+     code : |1-
+      Procedure Draw()
+      // At each repaint, ask OpenGL to redraw
+      
+      i is int
+      clShape is CShape dynamic
+      
+      // Erases the current screen
+      :Clear()
+      
+      // Movement of the camera
+      clShape = new CShape
+      clShape:TranslationCamera(:m_XCameraTrans,:m_YTransCamera,:m_ZTransCamera)
+      clShape:RotationCamera(:m_XCameraRot,:m_YRotCamera,:m_ZRotCamera)
+      delete clShape
+      
+      // Browse the array of shapes
+      FOR i=1 _TO_ Dimension(:m_xArrFigure)
+      	// Current shape
+      	clShape = :m_xArrFigure[i]
+      	// Drawing of the shape
+      	clShape:Draw()
+      END
+      
+      // Displays the described elements
+      :Displays()
+      
+      RESULT False
+     type : 458752
+   -
+     name : AddFigure
+     procedure_id : 4416122278233811005
+     type_code : 12
+     code : |1+
+      Procedure AddFigure(pPointer)
+      
+      // add a cell to the array
+      Dimension(:m_xArrFigure, Dimension(:m_xArrFigure)+1)
+      
+      // Add the object
+      :m_xArrFigure[Dimension(:m_xArrFigure)] = pPointer
+     type : 458752
+   -
+     name : MouseRollover
+     procedure_id : 4416148202248429990
+     type_code : 12
+     code : |1+
+      Procedure MouseRollover()
+      
+      CriticalSectionStart()
+      
+      // If the left mouse button is not pressed, exit
+      IF KeyPressed(kpLButton)=False THEN
+      	:m_nLastPosX = 0
+      	:m_nLastPosY = 0
+      	CriticalSectionEnd()
+      	RESULT False
+      END
+      
+      nPosX, nPosY are int
+      nVarX, nVarY are int
+      
+      // Coordinates of the mouse in relation to the control
+      nPosX = MouseXPos()
+      nPosY = MouseYPos()
+      
+      IF:m_nLastPosX=nPosX AND :m_nLastPosY=nPosY THEN
+      	CriticalSectionEnd()
+      	RESULT False
+      END
+      
+      IF :m_nLastPosX=0 AND :m_nLastPosY=0 THEN
+      	:m_nLastPosX = nPosX
+      	:m_nLastPosY = nPosY
+      END
+      
+      // Variations of coordinates according to the screen
+      nVarY = :m_nLastPosX - nPosX
+      nVarX = :m_nLastPosY - nPosY
+      
+      
+      // Save the positions
+      :m_nLastPosX = nPosX
+      :m_nLastPosY = nPosY
+      
+      // Calculate the rotation in relation to the current marker
+      IF nVarX>1 :m_XCameraRot-=Abs(nVarX)
+      IF nVarX<-1 :m_XCameraRot+=Abs(nVarX) 
+      IF :m_XCameraRot>180 :m_XCameraRot=-180 
+      IF :m_XCameraRot<-180 :m_XCameraRot=180  
+      
+      IF nVarY>1 :m_YRotCamera-=Abs(nVarY) 
+      IF nVarY<-1 :m_YRotCamera+=Abs(nVarY)
+      IF :m_YRotCamera>180 :m_YRotCamera=-180 
+      IF :m_YRotCamera<-180 :m_YRotCamera=180
+      
+      :Draw()
+      
+      CriticalSectionEnd()
+      RESULT True
+     type : 458752
+   -
+     name : DeleteFigure
+     procedure_id : 4416152397239176085
+     type_code : 12
+     code : |1+
+      Procedure DeleteFigure()
+      // Free all the objects
+      
+      i is int
+      FOR i=1 _TO_ Dimension(:m_xArrFigure)
+      	delete :m_xArrFigure[i]
+      END
+      
+      Dimension(:m_xArrFigure,0)
+      
+      :m_XCameraRot=0
+      :m_YRotCamera=0
+      :m_ZRotCamera=0
+      :m_XCameraTrans=0
+      :m_YTransCamera=0
+      :m_ZTransCamera=0
+      
+      :Clear()
+      :Displays()
+     type : 458752
+   -
+     name : Displays
+     internal_properties : CAAAAAgAAACXC+mSUO0RH1pElF6IHfgR8QD3gZOKEl71aUMRipCQ+EzNvR8ogVbBZ955xm4ioEm8WOxd+5gANzLeiNxbCTAjOsn5FJ0326fZzDtgQmoPxKHp7jY1fbcUF6MJEbCr5yYzjzuX3j3mII9LdKijyhGMxu8tRap1hLlJP6ugEJO6vx3QVBXMukka8Q4v2w0tzKgCBg==
+     procedure_id : 4416152586713430330
+     type_code : 12
+     code : |1+
+      Procedure Displays()
+      
+      // Displays the described elements
+      API(“gdi32.dll”, “SwapBuffers”, :m_hdc)
+     type : 458752
+   -
+     name : KeyPress
+     internal_properties : CAAAAAgAAAA0Z08Ga/OCqZCrsD/RYeGJVVGNvpcfrRNrlnZZ/gaxU0oxR6DXBZ2s7uOGhwQp2rK//vJpAGd4OoS8ac/E5IjBXTvmHxbrb1nxAVa25YL089uL1XCzRygVmwTyQ/OcbtcibZzP+P8HXttdcYPMvOfvezutRo9iwdY1FL4dK152b9VHsf7ytFYanHUGV8Ck+u3JeoAYujYt2V9KRmuID08bVD1Lhdl1kUu/033r+dgXtGs6m1NbzPbDfNUTda5CSMl5pyPy5ZEu99y1zmBsg+bUsl2L/jal7ymMlEA3E9GC6MCdIAXOkf+dEKC+kuqQZpYrKV4f9V/tlvIkjXuI2KkntgDyMJ4vh5BFIQkskzjBXfcnB1pcG0VSrVNPUlA51pVgWOPPT1BtvPWvku+7Y3fohqP3XAqbsVdVRlNnGYlp3KEZvJBVd9s/Jw1xZOKmoHZcbS3HOECTCyY6sBxlN0E=
+     procedure_id : 4416473124275943661
+     type_code : 12
+     code : |1-
+      Procedure KeyPress(wParam,lParam)
+      // Event to manage the PgUp and PgDown keys
+      
+      SWITCH lParam
+      	CASE 33  // PgUp
+      		// Movement on the z axis
+      		:m_ZTransCamera+=0.5
+      		:Draw()
+      		RESULT False
+      		
+      	CASE 34  // PgDown
+      		// Movement on the z axis
+      		:m_ZTransCamera-=0.5
+      		:Draw()
+      		RESULT False
+      END
+      
+      RESULT True
+     type : 458752
+   -
+     name : Clear
+     internal_properties : CAAAAAgAAACjGY9G26goV32xhA9xQc4+d9Vd/iP8koJRc+LxweVfK/V57R9iLsxCQTFMlpFD5hWYwFlNTIlnm+AZQtEs4x4A5eZB8rriIttmtLa27812m4drckc2QsaSSMIs7nM4WmP+xtzmmXLRTQby7T+q8+4/04C4OqcoQcxKHMw/e+VlZap0kn5QVleMiFDYljxtJmM9u5BF3U/cwuLojUMIciMV2erh7DHibNmjk2AZ5IEcdp6q
+     procedure_id : 4416508999606038739
+     type_code : 12
+     code : |1-
+      Procedure Clear()
+      
+      // Clears the buffer
+      API(“Opengl32.dll”, “glClear”, ::GL_COLOR_BUFFER_BIT+::GL_DEPTH_BUFFER_BIT)
+      
+      // Initializes the matrix
+      API(“Opengl32.dll”, “glLoadIdentity”)	
+     type : 458752
+   -
+     name : MouseWheel
+     internal_properties : CAAAAAgAAADFrR2ozjQqCCHEtKUzJp74coD9h9D2R16PLU6vMhxrwj/yAYSranlPfADo6/Adz/N5bc+PeVyy93/IPbiZt20jILUix6hFu5c1f1jnCn99rwXcNMfy1h8Mq3DWuO56Yih0JrK3Nemag3tMSSwqwLgJMVrgr6snopJX5iJee6mHNto9hzv3QCNZ0VnlLB1LaQqaBGbDdsBzsXVW0Q/eKaZpcn6QrNq/8WN2HGAuRUuyyqrV0GfOq1dyk+BfvZMXx5nbwE6m8zadZ1jGQg==
+     procedure_id : 4433617513487188905
+     type_code : 12
+     code : |1-
+      Procedure MouseWheel(sMsg,lParam,wParam)
+      // manage the mouse wheel
+      
+      // to the top
+      IF lParam=7864320 THEN
+      	// Movement on the z axis
+      	:m_ZTransCamera+=0.5
+      	:Draw()
+      	RESULT False
+      END
+      
+      // to the bottom
+      IF lParam=-7864320 THEN
+      	// Movement on the z axis
+      	:m_ZTransCamera-=0.5
+      	:Draw()
+      	RESULT False
+      END
+      
+      RESULT True
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+resources :
+ string_res :
+  identifier : 0x3d465e9c21f30ff4
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+  strings :
+   -
+     text :
+      en-GB : ChoosePixelFormat failed
+     index : 0
+   -
+     text :
+      en-GB : SetPixelFormat failed
+     index : 1
+   -
+     text :
+      en-GB : "wglCreateContext failed: "
+     index : 2
+   -
+     text :
+      en-GB : This problem may come from your graphic card.
+     index : 3
+   -
+     text :
+      en-GB : Is your graphic card a 3D acceleration card?
+     index : 4
+   -
+     text :
+      en-GB : Are the graphic card drivers compatible with OpenGL?
+     index : 5
+   -
+     text :
+      en-GB : Are your graphic card drivers up-to-date?
+     index : 6
+   -
+     text :
+      en-GB : Do you have the correct screen resolution?
+     index : 7
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

@@ -1,0 +1,172 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : CCube
+ major_version : 28
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x3d4929593acc28eb
+ internal_properties : CAAAAAgAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  internal_properties : CAAAAAgAAAB866eP4Ets4TTLMsshqEz3fUrTsqRNJyKDnG3Fh2I4G2j/gv1+ctrBQKEsIohDsPZ15m8aTDv/o82gJIt8op0fGoBvBA==
+  type_code : 10
+  p_codes :
+   -
+     code : |1+
+      CCube is Class
+      	inhérits of CShape
+      	
+      	// Color of the sides
+      	m_ColorFace1 is int
+      	m_ColorFace2 is int
+      	m_ColorFace3 is int
+      	m_ColorFace4 is int
+      	m_ColorFace5 is int
+      	m_ColorFace6 is int
+      END
+     type : 131072
+  procedures :
+   -
+     name : Constructor
+     procedure_id : 4416106372883687659
+     type_code : 27
+     code : |1-
+      Procedure Constructor()
+      Constructor CShape()
+      
+      :SetColorFace()
+     type : 589824
+   -
+     name : Destructor
+     procedure_id : 4416106372861536491
+     type_code : 28
+     code : |1+
+      Procedure Destructor()
+      
+     type : 655360
+   -
+     name : Draw
+     internal_properties : CAAAAAgAAADwL2PbiBr9vkrAFq92yrIQ9iWk7xEEDQEmQRowKANEQYXBnDGSvQ9zIMmyinNgB9KpukD48be7FxRSEbslM9odq+3+jB8aedSlfj6F2DWO1c4IxBFU7wViUF+sFkccNQ3cu+bgWAIQaRu5SEu6JX0rUfwiSuqthRG5ffrt4x5Xtk48Gb8v/F9fXRVCHck9730biSw9Wf75XdVHLORPpa9t5hSX92qSqNYW8ReCojIz1ZZe6gBs3BZ8fCAzXkduaz7TaZJVx2eEru+hxkjUZbqbEel8ohv5P07oHDQAY0MrRHojsFcdwhw3LAngJzkIjHstXfblC612+uWQodCAeaEvIAFLcrOqX7EHrEJE2gFtb9BR5ijQo8aIgW5NeqSbYBSgBRNcuVY6lOMa8P6RfjHc0lWaEez8ZtPqFMT/Hx7YQDhK6Q6WdUhphrf/T3C3BV/ApyPxcSeIkbUHQX44FPbqrFB6Vv/45YDY7wgLimonmJ6jcZCucZFDV0bH/XUcrQtxQTBhsdvBhKeYPg5gKnAGzVk=
+     procedure_id : 4416125411644394335
+     type_code : 12
+     code : |1+
+      Procedure VIRTUAL Draw()
+      
+      // Movement in the space
+      :Move()
+      
+      // Start drawing
+      API(“Opengl32.dll”, “glBegin”, ::GL_QUADS)				
+      
+      ///////////////////////  SIDE 1  //////////////////////////
+      // Color of this side
+      :SetColor(:m_ColorFace1); :Colors()
+      API(“Opengl32.dll”, “glNormal3d”, 0.0, 1.0, 0.0)
+      API(“Opengl32.dll”, “glVertex3d”,  1.0, 1.0 ,-1.0 )		// Top right corner (Top)
+      API(“Opengl32.dll”, “glVertex3d”, -1.0, 1.0 ,-1.0 )		// Top left corner (Top)
+      API(“Opengl32.dll”, “glVertex3d”, -1.0, 1.0 , 1.0 )		// Bottom left corner (Top)
+      API(“Opengl32.dll”, “glVertex3d”,  1.0, 1.0 , 1.0 )		// Bottom right corner (Top)
+      
+      
+      ///////////////////////  SIDE 2  //////////////////////////
+      // Color of this side
+      :SetColor(:m_ColorFace2); :Colors()
+      API(“Opengl32.dll”, “glNormal3d”, 0.0, -1.0, 0.0)
+      API(“Opengl32.dll”, “glVertex3d”,  1.0 ,-1.0 , 1.0 )		// Top right corner (Bottom)
+      API(“Opengl32.dll”, “glVertex3d”, -1.0 ,-1.0 , 1.0 )		// Top left corner (Bottom)
+      API(“Opengl32.dll”, “glVertex3d”, -1.0 ,-1.0 ,-1.0 )		// Bottom left corner (Bottom)
+      API(“Opengl32.dll”, “glVertex3d”,  1.0 ,-1.0 ,-1.0 )		// Bottom right corner (Bottom)
+      
+      
+      ///////////////////////  SIDE 3  //////////////////////////
+      // Color of this side
+      :SetColor(:m_ColorFace3); :Colors()
+      API(“Opengl32.dll”, “glNormal3d”, 0.0, 0.0, 1.0)
+      API(“Opengl32.dll”, “glVertex3d”,  1.0 , 1.0 , 1.0 )		// Top right corner (Front)
+      API(“Opengl32.dll”, “glVertex3d”, -1.0 , 1.0 , 1.0 )		// Top left corner (Front)
+      API(“Opengl32.dll”, “glVertex3d”, -1.0 ,-1.0 , 1.0 )		// Bottom left corner (Front)
+      API(“Opengl32.dll”, “glVertex3d”,  1.0 ,-1.0 , 1.0 )		// Bottom right corner (Front)
+      
+      
+      ///////////////////////  SIDE 4  //////////////////////////
+      // Color of this side
+      :SetColor(:m_ColorFace4); :Colors()
+      API(“Opengl32.dll”, “glNormal3d”, 0.0, 0.0, -1.0)
+      API(“Opengl32.dll”, “glVertex3d”,  1.0 ,-1.0 ,-1.0 )		// Top right corner (Back)
+      API(“Opengl32.dll”, “glVertex3d”, -1.0 ,-1.0 ,-1.0 )		// Top left corner (Back)
+      API(“Opengl32.dll”, “glVertex3d”, -1.0 , 1.0 ,-1.0 )		// Bottom left corner (Back)
+      API(“Opengl32.dll”, “glVertex3d”,  1.0 , 1.0 ,-1.0 )		// Bottom right corner (Back)
+      
+      
+      ///////////////////////  SIDE 5  //////////////////////////
+      // Color of this side
+      :SetColor(:m_ColorFace5); :Colors()
+      API(“Opengl32.dll”, “glNormal3d”, -1.0, 0.0, 0.0)
+      API(“Opengl32.dll”, “glVertex3d”, -1.0 , 1.0 , 1.0 )		// Top right corner (Left)
+      API(“Opengl32.dll”, “glVertex3d”, -1.0 , 1.0 ,-1.0 )		// Top left corner (Left)
+      API(“Opengl32.dll”, “glVertex3d”, -1.0 ,-1.0 ,-1.0 )		// Bottom left corner (Left)
+      API(“Opengl32.dll”, “glVertex3d”, -1.0 ,-1.0 , 1.0 )		// Bottom right corner (Left)
+      
+      
+      ///////////////////////  SIDE 6  //////////////////////////
+      // Color of this side
+      :SetColor(:m_ColorFace6); :Colors()
+      API(“Opengl32.dll”, “glNormal3d”, 1.0, 0.0, 0.0)
+      API(“Opengl32.dll”, “glVertex3d”,  1.0 , 1.0 ,-1.0 )		// Top right corner (Right)
+      API(“Opengl32.dll”, “glVertex3d”,  1.0 , 1.0 , 1.0 )		// Top left corner (Right)
+      API(“Opengl32.dll”, “glVertex3d”,  1.0 ,-1.0 , 1.0 )		// Bottom left corner (Right)
+      API(“Opengl32.dll”, “glVertex3d”,  1.0 ,-1.0 ,-1.0 )		// Bottom right corner (Right)
+      
+      // End of drawing
+      API(“Opengl32.dll”, “glEnd”)
+     type : 458752
+   -
+     name : SetColorFace
+     procedure_id : 4416447375218999170
+     type_code : 12
+     code : |1+
+      PROCEDURE SetColorFace(pnColorFace1 = RGB(255,0,0), pnColorFace2=“” , pnColorFace3=“”, ...
+      pnColorFace4=“”, pnColorFace5=“” , pnColorFace6=“”)
+      
+      :m_ColorFace1 = pnColorFace1
+      
+      // By default, all the sides have the same color as side 1
+      IF pnColorFace2=“” THEN
+      	:m_ColorFace2 = pnColorFace1
+      ELSE
+      	:m_ColorFace2 = pnColorFace2
+      END
+      IF pnColorFace3=“” THEN
+      	:m_ColorFace3 = pnColorFace1
+      ELSE
+      	:m_ColorFace3 = pnColorFace3
+      END
+      IF pnColorFace4=“” THEN
+      	:m_ColorFace4 = pnColorFace1
+      ELSE
+      	:m_ColorFace4 = pnColorFace4
+      END
+      IF pnColorFace5=“” THEN
+      	:m_ColorFace5 = pnColorFace1
+      ELSE
+      	:m_ColorFace5 = pnColorFace5
+      END
+      IF pnColorFace6=“” THEN
+      	:m_ColorFace6 = pnColorFace1
+      ELSE
+      	:m_ColorFace6 = pnColorFace6
+      END
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+resources :
+ string_res :
+  identifier : 0x3d492954344c13ae
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

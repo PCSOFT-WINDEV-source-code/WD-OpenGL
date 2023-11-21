@@ -1,0 +1,901 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : WIN_OpenGL
+ major_version : 28
+ minor_version : 0
+ type : 2
+ description : ""
+ subtype : 0
+window :
+ name : WIN_OpenGL
+ identifier : 0x20ebe48e18460e46
+ internal_properties : CAAAAAgAAACBUu+eAlqoCh4lmZ+2qivuYXaOcErrtrjYS3Ea7eAz3fB3nhFc8lzZ36cAwNfNnsbDtf4brSXT9cMUEwSmZzbSR6wKmhHH6O/Loj7JrvicoSTIq/SkgkHaFnr7J6brS3sM0Il62OFNM2EU0Y7GSfK3rloor7xmOqueIfpzCBTT4u6rsS4/jPUY1U7yaY9e+Y6vdXR4VMEYRV9Vtr9NPwLxFJ965KmTQQkU0wTcosIYkMv/ubI77Eb+F41PJpyD3fhsL5A3Qh782QpKnfADzvAJihGR11lNmR17iKlEBgObZx7h1mGg2s+iK4kD1C+9OYr/mgovKRho8rEe0oGVjAwWr8pFYSbL/gpXxV8fc5kns7bBDAgJNo35IfHiWrUzyaKm0NPMXthW6qj7+WjsE2bXvKWxOniNFG8YVrmrX4VuqAM2lrUCj13bsaAn1t8qhGQIKAN7M8799NwNbJ1LhqZxV0rmmu5DIxW7DeNjP0BdORehrYAWesl3gDTe1QkYs3z9LXDfIqL74hCb6etAevVAIbxjW/1aJWTx/ildwkdrkRUV28nFBVVySiog6IOUyIp7fizY4vA9K3GI/RDyeppJBBH/mIRvPJqx6Ot3ix+YPeIVsNhPbR+ytN4zuyFAlljDjAXUkb5tlSt2M2/UzGk50u8ImmbfU7VVZWzFrZoqxo8r/ihIM2uOmyI0WCU4wGGQttzsTMxVsoCEALXfjqPTCPsZNOGq3bDylhVxnrxGgMl82CGmo/omhNSxazcn/5umpuT5S64yUCEn/i8ug7A92SYS5R5F
+ properties :
+  width : 894
+  height : 678
+  widthClient : 892
+  heightClient : 646
+ controls :
+  -
+    name : Image1
+    identifier : 0x20ebe48e18610e46
+    internal_properties : CAAAAAgAAADTodBmq54ZQOj9XtAW7bnbT/L6Lau8nHIxtHZA95aJLIk+65yr6dpCmXK02VYu0wO+jnsORrubzy2xuYnnh3P0lmk1TpafBH2U29mpvhcBBKtgDMEEZG/68Zh7K9H7mtxBXWq4kQvNB/v7p5XpxsfqVC52uxdzxr15uq1zPF2/aKHBUhzNCsamuWkLZyY+A1SGh9C3DE6gIof4a8WTSqcvWx5jk668wnw0LVVDJhdRoRa65goEVRM4ytS6PQ2PFjVJcDf8ChID0YobCP44KXaWdlkMnrPeYId9hhBSu4mcCzqUabOWa7Jvq0mg1znAbbiA4LoXsZ+j21ANomNRCeOjWosarDw/4LAImgRxUkSBny+uxuJ4vXreE5GR2FkKwTK/Gci70tSvUZxwv9DVKkCwPmg2NpTB3a6OrSIdc+mZ5rowGAz8gEQZlhD9MgOXzok4yD19SGrDzSZaHUbaqGlwKTDVhnvFAHME9KZuw+cAjWNLaknrq4YsTJzQsxBSUVKSo1hseV4pyO70PeUsVNp96cscx3pTmCETLwKWoweWXdqEYgjtnUaUm4DN5bpq1FUBGeHjLE9NhPEzKD/G4BrcyNcEI6dMikxHjl34K74E
+    properties :
+     x : 436
+     y : 30
+     width : 452
+     height : 273
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        code : |1-
+         
+        type : 14
+      -
+        code : |1-
+         clOpenGL:MouseRollover()
+         RESULT False
+        type : 66048
+      -
+        code : |1-
+         RESULT False
+        type : 66049
+      -
+        code : |1+
+         RESULT False
+        type : 66050
+  -
+    name : BTN_Cylinder
+    identifier : 0x20ebe48e18530e46
+    internal_properties : CAAAAAgAAAAFcmwmiXbK+p4RI2tT41IWVLz3w2gJ3EDWs4PW2ucYANAryWOvu82pcdeArRMJ2gUdKHCTlxxUKD/VtC21dLHN0ramwXmzpdZ3IUgbhITVzaIUOCBp3V1wZbt6tTUFspdG2simiNkfVuO/KozcAayAyoe73DKhpO9Vp5LasyO7jPpP/RBo5VOS2sJkEpJBJNk9RwDsxw4s98ax67bT1bNK5Llgj5BWm042cEQyWyRJ3VJgGshcOxYk1CuNODitVbak/75NDu5u/GV5az/l/C3JLVTkpB7ZfWvlH/lKH1fWgjwKf/Srl3uTBd+2jHgSOI4uUr1ViJ81i8M0y5w+wrj/6WbjFT9uUDNM782nbw9lLk9A4+tNwHepWqf9lgnUPTnjobB2UpI1/PkPL1kcHvr4k3tYCFv3gYTPT5t8HmMjJqMPBJm8DjRLCue028KRwt+ynF9vjwF9P5+n94jsjYWJm4mmOkcQ4IHVoWqKBJxTRuK5Lxc02FWWHCalWxUO6eMa+c1TXnzRd+abZMRrjxpIuyCe0QUorZeicW/S6IzBppRznk29k1jzBCsahTkWn+KcTNpGyT+HVTuN3Tv4voFhduc9exQ6yYDSHBZ8EIy3jtGc7TKtBVCPFK5JbaUQ1rVuSXfuFU3bBJUG5lGg+rXC2tFYOl3VB7uZA9odNiZUffus+KCcgDSVP/tJ3KmdP1T0KJbQG7SsHDTqWJSS64v2cFnerFQqMjR1Ph9wcmBaizCSxzbHMyRUBYWq9obtSMEfDn36qOFjFsTFnIfhafIB
+    properties :
+     x : 437
+     y : 329
+     width : 75
+     height : 70
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        internal_properties : CAAAAAgAAABfGVkgv7QRFlHqZyiEzz5/GWverDa3V1MxWPPe6GUpYRsOQGA9Wr3hconfVvTK0/ypXKgUJmrdIfkI8ySZp1MvBm6fwrI/37EDnU1bp2F1fexWL3Yr8hGgU5Mgu9gwkLvKVkrQDzF0IL+Co/g=
+        code : |1-
+         // Drawing of a cylinder
+         clCylinder is CCylinder dynamic
+         clCylinder = new CCylinder
+         
+         // Initialize the matrix
+         clCylinder:ClearMatrice()
+         
+         // Diameter of the 2 extremities and height
+         clCylinder:SetParam(0.99, 0.99, 2.0)
+         
+         // Rotation of the cylinder
+         clCylinder:SetRotation(-45.0,45.0,0.0)
+         
+         // Color of the cylinder
+         clCylinder:SetColor(RGB(0,0,255))
+         
+         // Add the shape to the array of objects
+         clOpenGL:AddFigure(clCylinder)
+         
+         // Display
+         clOpenGL:Draw()
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : BTN_Sphere
+    identifier : 0x20ebe48e18540e46
+    internal_properties : CAAAAAgAAAAKUdnoTegTvNdalDmfWFo71jaxKASHYQBVFJa1iqogrLE0jx7oWOwf36jM6t4wh50omMawcYhQ0LpstJBqrmdcDUkft8eQLvgBp8OVlbmJWzCpmFY1SOrLpoxuCWcTE7M1/d6HUJe1VLHB6k5D5YGOgx6eCbgqekuyhgUVbAv2iYjlNiQiuklmG7ZMIdA8c+Q/bjzmpueWtCv/t9Yl5fNqEjvA1yEaewICRFAdgVchkiU4G1UV+APzL6H55GbZGYDis0SX5xS2hgs4fabdJ8tiqL3doIYOD8XzltgpqacHvvWh+O75POzl/ySEdhcbLKvaAcpNV4t2bahLoH03IySiLTneFNBrzJRMNeGFS2vbq3qqRv/4PBnFMAAc6i1q14oQyO2VhweGkSc9EdeKwcj/Nm7tf08CK5vCwq9oD6eEzjZqo1h1kkgNKjwx59huRL+QLMnLBfA51Q/vNNa/iHspzesCNUI+xG/JVABlCz0gy7VB/aflq6OuPsrZM32c0OmPViTYUCZTqEdMuj8GlBELse64npKRaqan5bmwk4o+JQpvWk1+POdH8/IDk8f+nq7ukf+Y80424pCrovALxtiLlN97W3d+RGCZpoLkzCtLxyqtE+ImVW6+iZtkWvgbqPylzUHEX4LqUj49tOWP5GhZVx8kCDtQtfkTCm2U/8ZD2LV8BkB8T6EkuiDEeMpbNEaGjoICgR601vuI3l7ManYMrMxqG39GuckUYYr4ZiKjE/HQ9Z5HVOTOXlIM9dIl03KGiYRO7eY=
+    properties :
+     x : 538
+     y : 329
+     width : 75
+     height : 70
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         // Drawing of a sphere
+         clSphere is CSphere dynamic
+         clSphere = new CSphere
+         
+         // Initialize the matrix
+         clSphere:ClearMatrice()
+         
+         // Diameter of the sphere
+         clSphere:SetParam(2.5)
+         
+         // Color of the sphere
+         clSphere:SetColor(RGB(255,0,0))
+         
+         // Add the shape to the array of objects
+         clOpenGL:AddFigure(clSphere)
+         
+         // Display
+         clOpenGL:Draw()
+         
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : BTN_Cube
+    identifier : 0x20ebe48e18550e46
+    internal_properties : CAAAAAgAAADrjloZ4ONVM2lnMZhuH7NS2EHbIVkbnlY/AmOziy61RTlIVignmBBJ9V2gS2JpiIqoFiVyxpnHOVdsJehGJsXOO1EJP1MsD8XS9rliM3YosVtAPJuQKP8IBgaHsK8UdQxI5+ilV+JIoK6csIzHMAhpQk63TYGfpPUhrySXSlV8+SFprtSY59geKph/vzxZVgJ+fLbxXRtJBxh7KW3hlvCDHeCKaQ6JBD2c+cDOGgjl0NTQ5G9xCKwEkUw7zHN/lD+GMqhIEfxn/uxhBqVDh6zFYpPWHIZDJVuXSnSENqCY+d0exOWVFdMpG4CWTPM1SzuERLa8P/pNshLp3PtRyVn/eurl305xs/PbdJ8daLlgUfUM2VC5Xyd2Rcz4GznOeC29NY/kbaxCamHLYC1gzgwCEnemuB2JAf+00/g0fwIVGF2oYqUHAevh+5IF27DT5p0ESrDQcwOHYD+UCaEfvK4Rtj/Genre+Ar7kg0ZGXzpolmvMufsrCyJPyITZf6kBQlWvJOAKZ4GSMAMReYdDM2MMcz5ywo3O7pjkKnRk+obclkSOd8lX3uiUGxioyZ0XrUdtjM7GrJgnu+czMmE3U43nwVA/pWyJrtZiFnIBMKHmqhk+6mpQjcqzcBjNkKZsTZkIVQWfKX+PY887YFcgeLMOC18CKHGXJtbZ0ARvRTWtr5vXRc8saYkyf4Aqrd+dSy+edbKAWM7XzmYnzo6lQd5Dfa2F4oD1br/5O/o/4x+85uxcxez8HPr0oy8pdEi4BwCQiZ6yg==
+    properties :
+     x : 763
+     y : 329
+     width : 75
+     height : 70
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         // Drawing of a cube
+         clCube is CCube dynamic
+         clCube = new CCube
+         
+         // Initialize the matrix
+         clCube:ClearMatrice()
+         
+         // Color of each side
+         clCube:SetColorFace(RGB(255,0,0),RGB(0,255,0),RGB(0,0,255),RGB(255,255,0),RGB(0,255,255),RGB(255,255,255))
+         
+         // Rotation of the cube
+         clCube:SetRotation(-45.0,45.0,0.0)
+         
+         // Add the shape to the array of objects
+         clOpenGL:AddFigure(clCube)
+         
+         // Display
+         clOpenGL:Draw()
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : BTN_Cône
+    identifier : 0x20ebe48e18560e46
+    internal_properties : CAAAAAgAAACH3/9w3LaftCvl682swtF9PYL37g1fSqXkz7hTzuhGpw7eGbAQnoFYpIhjwWVynalUmYIf4ZwrNCGduThJD5RkMvrzQzUTBwcM84kKcsPtlSPtYKG3sgH+Z/EC7pAfUqbGcequRTnwQ9dt6tHtiYaumWs1oji3541DiB9N+mRPMP2uoDKWDfXdVtPjsLvGi4GU/hRbUomWgDBTyXUYWWcaB9wA/1TJDQGhWZhyNpeaUK0DH215uO+2EJvnP26sFR8T7YCJKeYLGxq0K98fkDpa3iPdxBVDzLFuZ28oac00oNG4wsB7yTxQGwkVV7l+EKesUoIQpU3y8roF+6a/4XIyqCG2AoY4EKU7l4P75YEu9R6teqJKohOBuOPTlsCzorEf5khyyiOoNinUTEow6xQy3FeDkngkH+ReiSKLRQXEfZwXq8HISCpE3N2G+N4swORGH2FMiHjvFI0cPX8lcD84S0gkijk+tkrXs+OkBXGyzPXAQZz8i3tdLp9aJKEkcFxhcZyhu6SbfdUxy3zgRO8UHZc28YOjjtdB7Ax7y4Ig+jIAtkJ5BseKddE2ii8kLK2UDD/H3GpymR7euVfTLHbw0ODBBqT8UjsViaETAL0lljAEvcEnGx4Hl873vU6X9sWxLEN7oPZQFT+T7n48EFDq1yW7wFaoYKWC1GnLGY2vurNBEF9ZiX9NpuM7g/b76gmSXZzpogzkrf0lx4sWJPY1SqECWgjqAcbScI23VhixMMJgcjwFvdmfCTFXIRbb4lkvOXHzJ3v8
+    properties :
+     x : 649
+     y : 329
+     width : 75
+     height : 70
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1-
+         // Drawing of a cone
+         clCone is CCone dynamic
+         clCone = new CCone
+         
+         // Initialize the matrix
+         clCone:ClearMatrice()
+         
+         // Base diameter and height
+         clCone:SetParam(2, 2.5)
+         
+         // Rotation of the cone
+         clCone:SetRotation(-45.0,45.0,0.0)
+         
+         // Color of the cone
+         clCone:SetColor(RGB(0,255,0))
+         
+         // Add the shape to the array of objects
+         clOpenGL:AddFigure(clCone)
+         
+         // Display
+         clOpenGL:Draw()
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : BTN_Clear
+    identifier : 0x20ebe48e18570e46
+    internal_properties : CAAAAAgAAABso008Ll8XfAnabsWgnLFHoxz2eLobXXMFs1I4ZUqo93AAtG72J060m+4prhIo40PIeyldQUdmeeO63/e2HRp65CZ2kd54sT4mB/e6luzY88TKYckLWeRclglvHslS0LWntVnJTESn3Vbm5lr7KV7LWRFnbcuEBoMilIR1VIgs9IFKBIj1hvdHxAy0j2VuEcKu/RWkIh9Cd2wZAWxJnYsjC4/WAjiihiuCpIWp3CbImv1vZ9L6XA00umsYIqHbwLnG31GcqHaLhSYGeYpAhNUVvyADmCg1Eb4SAn6Z/B0pZkKPZkLaxMZYrkE0ATdkY/mqDgKFI8X0SS6GY8LgUPv38SUVTlrSMj/UT/KTO4U47Yj1bbwGTyKTC7eItppk1dlIRQCe7/5jdFRKKRHcmzwrzob3FaUkackiYt/k2/HIUipGBjWuiSF0U+ku/jXjlQZlyVZYPo9weuJiN2MaAU5G/KrZ9seFLUaMV5OqUPjjEJqMsmIsXmj1R4tYao8te8CkXKNmsmqX/JUUmcUSpQD2qGGQh8lixY1DA6pVx9mH1ejNkcC9SutHlLz54DpC+edqLWm/7Cd1HISXdjX4+4l6RRi+6AiTUWdQO8tYIMTWTSSXCxIOebYG1ymMZm6z0rKNpRnb2GNLRABZMNl1BPBAxHlIWuPNqvYsL15zdEuwRzJAzldIbBJUImcWIhRZo2Igg9auRGWcR0Pc3jNEBWpXqXpwwl3REm1rfQ4yk7g+oU2OtVAfSheYRMngUD1XY51xOIf7RGzWGW96JOeM0a/CzccUTLPo
+    properties :
+     x : 576
+     y : 559
+     width : 150
+     height : 60
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1-
+         clOpenGL:DeleteFigure()
+         
+         // The scene moves away from the camera
+         clOpenGL:m_ZTransCamera=-11.0
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : BTN_Littlefellow
+    identifier : 0x20ebe48e18580e46
+    internal_properties : CAAAAAgAAAB+lzhNYpw6IO7C0hNAaodMgVRgqUFQnP8jXg9t59btVK2yGIgmTDso1QP3K8knXfK6ZSf5q8Po5CYKkD6BYGWmJXywQa52YSWvwoPixfyr50KShEz4vSkUPeYEhAhTuiCZy1L4CA4Feluf3xBGURtS6QyVxEPBHd0mIlOhjym09RJaJxZT1HZ54qfxOtLXK3mIGrSNnQlmrav0IqqB9mJmfjoJWFkZn2TB6s40HzkLZqQiyt/bXBzI+VPbTnVtGWz7h5Qd9c8K48ZJx2SlCmZR239Ob8NMDSmU6p0F2Ww1dk6Yvuv8HLflfJCwjRnKWLUxt8QZpqgsqpGXNDXkMiu65xv4GcDGOsdg/SzulliXvEuO5oDeLwCc7jH8CnrEMfJul3EG23zmr1Zwj2wXvJ7FUdx6+DkMJ6YnAQna3y3q+VwX0pwcQN5bIBHPFhvwu0rTpFM5+U7cOgG93S+PzE8A+g7DSloe2QgLGu1y/UylmMdZnEYZyc8a2IQOoyu1ymOuABcAoFcrr6PrS6KALNV5iVJrXraqOKcK+K3dmA2yBzR9kCfjuYewbtHQAIyzgKqfSo+T3y5Ulpe15jgLyq+LHdj8LmxuldYqiriO0uEKeXC1WjWRFKRYMUnYQlWTztt7NiHBXULRhsF8zScjRmfEm+ZuunLi+3h9K9IwQGetAjYgkt/sLO10rtaAogUi8m9ak25O1xEsTxL1Mietwusp61BQJibzcQaEwG9/oi+91FLot1lRiieZhekZWXMgWzwRgvIIdJhELGyGxOX9Xm6sAwbX1VE=
+    properties :
+     x : 437
+     y : 432
+     width : 75
+     height : 91
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        internal_properties : CAAAAAgAAABLqoptxoyoI0oVFrZuofRyEPaz+lb/vy/5lBidas9X9xhz0WsNvvpNf8+7Qbbw6RMTPiKHdKtpVFoVAeb/At9kMCoXwKhcYGNQFpE7zE7euN3TVc94m6orbABb1jyupMRJpGzPoNMiYTJivolqgZ7cLAccWGHjoJj4xFP+CiO8xSJFejve4K3HtKCFvpg2rA==
+        code : |1+
+         
+         // Variables
+         clSphere      is CSphere dynamic
+         clTexturedCube is CTexturedCube dynamic
+         clCone        is CCone dynamic
+         clCylinder    is CCylinder dynamic
+         
+         // Erase all the previous objects
+         clOpenGL:DeleteFigure()
+         
+         // The scene moves away from the camera
+         clOpenGL:m_ZTransCamera=-11.0
+         
+         // Head
+         clSphere = new CSphere
+         clSphere:SetParam(1.0)
+         clSphere:SetTranslation(0.0, 1.8, 0.0)
+         clSphere:SetColor(RGB(248,218,186))
+         clOpenGL:AddFigure(clSphere)
+         
+         // Hat
+         clCone = new CCone
+         clCone:SetParam(0.7,1.5)
+         clCone:SetRotation(-90.0,0.0,0.0)
+         clCone:SetTranslation(0.0, 2.5, 0.0)
+         clCone:SetColor(RGB(255,144,54))
+         clOpenGL:AddFigure(clCone)
+         
+         // Left eye
+         clSphere = new CSphere
+         clSphere:SetParam(0.1)
+         clSphere:SetTranslation(0.4, 2.1, 0.8)
+         clSphere:SetColor(RGB(15,0,0))
+         clOpenGL:AddFigure(clSphere)
+         
+         // Right eye
+         clSphere = new CSphere
+         clSphere:SetParam(0.1)
+         clSphere:SetTranslation(-0.4, 2.1, 0.8)
+         clSphere:SetColor(RGB(0,0,0))
+         clOpenGL:AddFigure(clSphere)
+         
+         // Nose
+         clCylinder = new CCylinder
+         clCylinder:SetParam(0.2,0.2,1.5)
+         clCylinder:SetRotation(0.0,0.0,0.0)
+         clCylinder:SetTranslation(0.0, 1.8, 0.0)
+         clCylinder:SetColor(RGB(231,149,138))
+         clOpenGL:AddFigure(clCylinder)
+         
+         // End of the nose
+         clSphere = new CSphere
+         clSphere:SetParam(0.2)
+         clSphere:SetTranslation(0.0, 1.8, 1.5)
+         clSphere:SetColor(RGB(231,149,138))
+         clOpenGL:AddFigure(clSphere)
+         
+         // Neck
+         clCylinder = new CCylinder
+         clCylinder:SetParam(0.3,0.3,0.7)
+         clCylinder:SetRotation(90.0,0.0,0.0)
+         clCylinder:SetTranslation(0.0, 1.1, 0.0)
+         clCylinder:SetColor(RGB(247,224,199))
+         clOpenGL:AddFigure(clCylinder)
+         
+         // Left arm
+         clCylinder = new CCylinder
+         clCylinder:SetParam(0.3,0.3,2.3)
+         clCylinder:SetRotation(0.0,-80.0,0.0)
+         clCylinder:SetTranslation(0.0, 0.4, 0.0)
+         clCylinder:SetColor(RGB(248,218,186))
+         clOpenGL:AddFigure(clCylinder)
+         
+         // Left hand
+         clSphere = new CSphere
+         clSphere:SetParam(0.3)
+         clSphere:SetTranslation(2.15, 0.4, 0.38)
+         clSphere:SetColor(RGB(247,224,199))
+         clOpenGL:AddFigure(clSphere)
+         
+         // Right arm
+         clCylinder = new CCylinder
+         clCylinder:ClearMatrice()
+         clCylinder:SetParam(0.3,0.3,2.3)
+         clCylinder:SetRotation(0.0,80.0,0.0)
+         clCylinder:SetTranslation(0.0, 0.4, 0.0)
+         clCylinder:SetColor(RGB(248,218,186))
+         clOpenGL:AddFigure(clCylinder)
+         
+         // Right hand
+         clSphere = new CSphere
+         clSphere:SetParam(0.3)
+         clSphere:SetTranslation(-2.15, 0.4, 0.38)
+         clSphere:SetColor(RGB(247,224,199))
+         clOpenGL:AddFigure(clSphere)
+         
+         // Right leg
+         clCylinder = new CCylinder
+         clCylinder:ClearMatrice()
+         clCylinder:SetParam(0.3,0.3,2.3)
+         clCylinder:SetRotation(90.0,7.0,0.0)
+         clCylinder:SetTranslation(0.5, -0.9, 0.0)
+         clCylinder:SetColor(RGB(73,147,186))
+         clOpenGL:AddFigure(clCylinder)
+         
+         // Left leg
+         clCylinder = new CCylinder
+         clCylinder:ClearMatrice()
+         clCylinder:SetParam(0.3,0.3,2.3)
+         clCylinder:SetRotation(90.0,-7.0,0.0)
+         clCylinder:SetTranslation(-0.5,-0.9, 0.0)
+         clCylinder:SetColor(RGB(73,147,186))
+         clOpenGL:AddFigure(clCylinder)
+         
+         // Body
+         clTexturedCube = new CTexturedCube
+         clTexturedCube:InitTexture(Image2..Name)
+         clTexturedCube:SetTranslation(0.0, -0.3, 0.0)
+         clOpenGL:AddFigure(clTexturedCube)
+         
+         
+         clOpenGL:Draw()
+         
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : BTN_Exit
+    identifier : 0x20ebe48e18590e46
+    internal_properties : CAAAAAgAAABzJuLumNpCof26WgoCDrWNH/+MuXAsUw/B3VpKWQIp1VmpWzwITiBp0ZZVpQ9NWMMTnV7NBp2kwZyX/U4exIk9F9gD/1kC0UinIycNvC8aqH8hbkFdZV2y/UqPlSAsO0rJAMPZTyDmZMVl6a15O2L/dGk/kqbIzLsLYqpgEyH+ew7OQVnc+Rb9CMWyiv1DAXcoj8RzgJty99s8WgB/vMRyx4dREJ1f4EpnOuVsJqZOmHAUINZfY4CcfHsPHsn4LEUR8/bdfmB2EBydC00cEHm3FCcI0d9IkYlUYxqlwW2sRBEANSkJlv74iP/uss/2HE2i88CMbDYKpVCleHLnA9yB4uGci/VGu/wX0vBTOYFEzLKBGuWoNzmhLTlxW6BS/lBLvvewmU5wq35pZHkZkggsOkXWAHu60W25lhvfmYvyl9IMVmTuc+xnAiv1pn2wScIO5X2nESrHew2h/K6jtqzncuwy0+r+KdWevl97wilhBD8LQMGqkZeKSGRqJQG49Q69m6JwpWeV+gUNGxoXXkPdMN+3pgayXeE6wu+K685KdGmhzi6T6u0Asllttl+SY0giov8/Eyba5Wfl1rUKSahUB24hE+M89J+i3xePVynWqJ8twxej2sYBMcUKvw+hOZ4cUsmRAzBDCgzvn/TgOTK2SB08EfTi96EI/Z4z/Xi4gBORoFtB4W8FjPoV4I1UJjvZyw2YAgPRYxztaTvtdNQAQ2B/zyZjBZqB2fbJURLqpUXMJu3xpIDmOhnzcHVhITP7uq7iUg==
+    properties :
+     x : 785
+     y : 568
+     width : 100
+     height : 74
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         Close()
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : BTN_Marker
+    identifier : 0x20ebe48e185a0e46
+    internal_properties : CAAAAAgAAAAX2tzhg1LLun7I0M7HeFbJ+d1NT18PWivrw5I/KfQT1ad0g29aF8C1OtODIBwooDIJ9PQJjfWuFTONc4bkdRQCSoDR3rTC8eSUGB8QahjYSJ0gV4EDV48p1H1Kw4E0toloxwdfe0fvQWo708oSiwob4UVuo5eoIhuQfmxavpvQ8kOA6rAMWC+Dw+udDesyqSIpCM3PFdDbqiyPExBLFJgOF8x1ARqhPP7WxvDWctlpomDicLGPqJNFV9MhhqDHKPSU+tYPV24/Zq+XcgwWDXgYXB7ET16tT4QDYvV1aBBAubgRv1IeeUPA9RS4oL0+CcZDB8C75Q3FXMfhscyevehr51rq2WZPlc++Lzp/iP17DCbmpxN+eMYlzSftUPnyXM9DWJYWRPlXYlSjEAT2yZ/6P/j/KZUfnyPJzOT7C5YFWWLHF+2z3GnXH6kJPSvuN2EOO8ryl6ut1tH+NIrYHWvSmGfoKCnLgbp5+Oz9YR2vyfRwuuW8LjdfnDWNlzUOmwTYJCyetX5RkshyWfYJQvrK6G+gKhehbPz/bLplvuBbRo+9fVoMmRaRIExkOuYg2empWVHuEZO8adSRlIOAAPfUgYWfbTznyzNDZjkpvfJxQzI8iMzqIFiC0C7UiRZ+OUu8D0amkooMopH/DXjcddw7XQQSXMxqJSZ7iTCyCMJis4XkoN7mBoJ8KzuMtAY4RVqEyUfUH2IU5ObWbaBAfmjDtwlhWWWXPoEm5bwrQiCOsJhxiSkBXUyAZGjSMwQhlO4HtHnBU0wDbBk5AGGG8ABb2G/K9GxQ78TNdQ==
+    properties :
+     x : 434
+     y : 560
+     width : 105
+     height : 86
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1-
+         ///////////////// X axis ////////////////////
+         clAxisX is CCylinder dynamic
+         clAxisX = new CCylinder
+         clAxisX:SetParam(0.05, 0.05, 3.0)
+         clAxisX:SetRotation(0.0, 90.0, 0.0)
+         clAxisX:SetColor(RGB(255,255,255))
+         clOpenGL:AddFigure(clAxisX)
+         
+         clConeX is CCone dynamic
+         clConeX = new CCone
+         clConeX:SetParam(0.2, 0.4)
+         clConeX:SetTranslation(3.0,0.0,0.0)
+         clConeX:SetRotation(0.0,90.0,0.0)
+         clConeX:SetColor(RGB(255, 255, 255))
+         clOpenGL:AddFigure(clConeX)
+         
+         
+         ///////////////// Y axis ////////////////////
+         clAxisY is CCylinder dynamic
+         clAxisY = new CCylinder
+         clAxisY:SetParam(0.05, 0.05, 4.0)
+         clAxisY:SetRotation(-90.0, 0.0, 0.0)
+         clAxisY:SetColor(RGB(255,0,0))
+         clOpenGL:AddFigure(clAxisY)
+         
+         clConeY is CCone dynamic
+         clConeY = new CCone
+         clConeY:SetParam(0.2, 0.4)
+         clConeY:SetTranslation(0.0,4.0,0.0)
+         clConeY:SetRotation(-90.0,0.0,0.0)
+         clConeY:SetColor(RGB(255, 0, 0))
+         clOpenGL:AddFigure(clConeY)
+         
+         
+         ///////////////// Z axis ////////////////////
+         clAxisZ is CCylinder dynamic
+         clAxisZ = new CCylinder
+         clAxisZ:SetParam(0.05, 0.05, 3.0)
+         clAxisZ:SetRotation(0.0, 0.0, 0.0)
+         clAxisZ:SetColor(RGB(0,0,255))
+         clOpenGL:AddFigure(clAxisZ)
+         
+         clConeZ is CCone dynamic
+         clConeZ = new CCone
+         clConeZ:SetParam(0.2, 0.4)
+         clConeZ:SetTranslation(0.0,0.0,3.0)
+         clConeZ:SetRotation(0.0,0.0,0.0)
+         clConeZ:SetColor(RGB(0, 0, 255))
+         clOpenGL:AddFigure(clConeZ)
+         
+         // Display
+         clOpenGL:Draw()
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : What_is_OpenGL
+    identifier : 0x20ebe48e18480e46
+    internal_properties : CAAAAAgAAABd0MQKO1P4I1nBFGNhpVOi7GOhkrZkTIRM7ekkkJjz607O06y2jq093QHyiRFqOPI4z/1+sLQ1Tkung+ZChd0m7uDVXmwQIjBa0zC2rzCz26A2DuCSNNtScTadxjhW+17raiVO0JwWJrK2NW956ERLVumAy2G7W0g1bbnyUB/AVJ0TqHPQZbCDK3Uotlc105sws4FfqSuvhZ5NL+DouleLnpN93vunyAJHLcYroQ33CUWJ4ytLe3UuQsXWiItx4+uIJyn0/Ctn7NrQYyYzp4AUNdMKs4kf5RpFsuqoQGTaihF6eVAlf8M2Y+o9VuNtG4ZrvnPFF+jDFBbSrIXNYx2cnEa3FFN2qKC11QPXVGzBdFMjqRxjLXPQhOF/GA==
+    properties :
+     x : 11
+     y : 90
+     width : 331
+     height : 17
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes :
+      -
+        code : |1-
+         
+        type : 18
+  -
+    name : What_is_OpenGL1
+    identifier : 0x20ebe48e18490e46
+    internal_properties : CAAAAAgAAAAUcKwIZJokwZeivAcgfSReCm8mQueScxdj1oaxuHBNKHBYHMRc/9VY3gvybA4EXpNtNS3FebW2N2FggJ72ySuD1Azu+slCq0jP5VPIxdRIKhGdlSQmgvFf2GasXAuAIIaBD6/GIYnrqDvxQJlpLywVBKs4k1lkgj0U/e1aq5RCXOiTqqnestMkKp+7En4wrh1MLGJHzwcjHOOn3w0VEhoqlkYMwtIihfU+u3y0Zx2brQvmjOJT9Xk0vpBRJLXCmBNzT7WDmW9a9lZprB1Vc6etVn9hs4CniVdgD+YNubtuB5Wg4f/TjTxfR/zgFdN/CfgFNvihqdcNi6b7x0bZSiOj4UI3FvpjMG31+6JxPZ8HEnp8LWQK/AnY5WnDCFmKXXjcCNl3BxJhXREAhZWP4q63V7NoQJDE3weqQ0XO01/UKgoVfnNpummllBAxqFThYf+gqq6W+lUExLgW+AG3dVEugY1XjCCupgjloynGNlLpDOgOCLvCvDYdTJ21ZzvIf/bHkxIKIGZeETXnZU8C3Z1p54jkRnz8hdMM8PlL/cuttYjGLd996oKbdNBlG4gjs1LEvhRAqtu4nO4T4WWRU7o7AQU=
+    properties :
+     x : 11
+     y : 109
+     width : 404
+     height : 65
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes :
+      -
+        code : |1-
+         
+        type : 18
+  -
+    name : What_is_OpenGL2
+    identifier : 0x20ebe48e184a0e46
+    internal_properties : CAAAAAgAAAAYCd/FlY4dj/FGw+yRfUG0JfhlfOATMjuSsjXGoODNKtkAkZaYqnrr5sib1MOmMaWZADpBrasMjofxz6gw+kIf0T609zzzOKQntKFg8YWh2uTDbDhpWgg6a1x2ftkbI9gyvh1ZEHjz6gIUi5vMDh+Bbv9qkDh054gjmN1m7xMvnYUKNoxKALHRoRzjdXLh0dwYaK1Pnf3OpKl2IJDiQmgA2fkM18dQdU/iTKm5u1tdvUf6dbz4d1gWw6L+ecHC6k0CM4q5rzSYBbJxJZrFaj+7w32fRuVE1fMGgy4M6vXDfrXPnnfEHHZ+71nXqmi1mq3CKpmxLpgLtG+Kt+XQuMAeT3w8t/L6NLbwoKLe6OS2uGvrm/37zP204EEMevHjbYdiV9boJN37OcaOp+jTyzIGXVWfV5h4/cYZgDVSyCz1Bxo=
+    properties :
+     x : 11
+     y : 211
+     width : 331
+     height : 17
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes :
+      -
+        code : |1-
+         
+        type : 18
+  -
+    name : What_is_OpenGL3
+    identifier : 0x20ebe48e184b0e46
+    internal_properties : CAAAAAgAAADxrRBzUYN5z9DqvLgduijgyVGwb5XYnos0zWQfQSk2NFkGcAWRDwOqbZwMtWiEh19s+b8PEvSbaFS0wQzsY2ZipJauSFa64ESc4Y45+DdkfUfkXQ91mMUXgpYgQhyS+d2c4NCT1CFeduvRpdOW7lqz2RsZ9x3eEhankgpkZ5PVYwrsNfdMrOJWbkTAD8obJUSzBuzw8RATDOLLOe+Ylq6ikPiGz3ei9GHaY0Rg9wcWce8faumx4Bm829sWiqrOJfH1z3kYACgoq7HRjc6JVxRKPk1giWd60iUJaY8opYeWZcznI0vU5Q/Lztj8sfGeW7KmILlGO7dDydk0RXnysDzPbGqAnPQRIlMYYW5ioBKVgKvmgKQjtvLGzliTkIwr2WXSrjJHIGHTpf6vvvkdZmVNg2ywDlt3CGw20nEAzpAnzWBCzKshcmL8nnCJRy0nrT9Uk0YvTV4rc0fyCIubRfE9AHhGcQwCtJ7wiiOuMgkW7c7vn1ku1+arvWzBpCBTg/MDNLHLcspRZLMFEf574x3b96fYrUNIg4zq05wmr9jUcPUaEYTK2UBBqxOJF1lQqmGxquXGxz1wvvDpjXk129hkkKUPrd1x4W2KsYIvVku6OAP5djk7sYpRYakK5On1YcyKfLCXXpWnw3bsmTUSplGDCptEvG6iHFOaAhdLwJC9vob2DoM4DcCIcY1Tg0UmiYWhzhTq377cSP2I2tytTKovxEIuMGUjID6rMQgwUnJhp+IL5/LsxnaW2iYlrg==
+    properties :
+     x : 11
+     y : 229
+     width : 404
+     height : 113
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes :
+      -
+        code : |1-
+         
+        type : 18
+  -
+    name : What_is_OpenGL4
+    identifier : 0x20ebe48e184c0e46
+    internal_properties : CAAAAAgAAABbXOZeS25g+3B6dpqe2XF/oOr5UWOw6e8V0eE8kC6mvTn1fA2vU6O2R47FmIS5rakpGXYMXuCnrQI+Of71kPrMvYmGav5MwpLXHdrldTvx3k+wnQtx9x8isCMQoAiBdTX3gOzeC50C1BaIrNqOefF/NyXM226z9KvbV/gwC7/TvWTh/KEoZJSgW8+oYWfOuwojXc7GPqfO74fAeee6eqV/dwUjYB/OfZ9vR2r87i/GY8N3RTqBDp1C81Wobt8LOTMi4q/+iEfonyCt4oxOQKwMkb1XK0jphRp4FpkBIs8ZO+d0Orf42dj457tMI076/PwBJbA6wP+gM89cReZVDkPQKrl9if1jn/muhKT15eFkpib0c3ZKKTYvujnaGtoP6WPcKW9lX9owGAwYvt92hntkEmZk3GYNv4LjO+SNj0vkRZNgww382Z4NjE+yxU28bLxy/56x8EdUPFUrCtVATKo=
+    properties :
+     x : 11
+     y : 479
+     width : 404
+     height : 49
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes :
+      -
+        code : |1-
+         
+        type : 18
+  -
+    name : What_is_OpenGL5
+    identifier : 0x20ebe48e184d0e46
+    internal_properties : CAAAAAgAAAC+jk0eAnn62J4FnYnwONX+wY1cqiQQ81Qc00xv5z/fWRC5jQQPadp4XQu4rzUItud5nV2UX/nLX7GvoEXOncF5R0O5k+NbA/bwivvhm4XNGy3GBVGvomBod/m1htFa3CgrG2ZTGi1MgzxZgQW3N9L5Do0rVRxf+U7U0nYpe+V7rUsYLg3kuHcOos+8v4h66U7lXozrmSTvUXtpi46MNAPFWDRxP8LEDJdLNOd96afBzEvUrRN7jNjPhWwgHLGFOWnNrhzhfmosB7eFa9oA8sB+wH+x8oRtMeSZYDh5mlxINRr3VrP7tRZYCWoSZ2zCAirOIxGjUYxeYwxqhcALk1uqiSrXFzKWLAa1na/56F/wPY/tx+hhrQ3YJ4ZWFROuvood+QuDFviHpg==
+    properties :
+     x : 11
+     y : 461
+     width : 331
+     height : 17
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes :
+      -
+        code : |1-
+         
+        type : 18
+  -
+    name : What_is_OpenGL6
+    identifier : 0x20ebe48e184e0e46
+    internal_properties : CAAAAAgAAACtBMuUjaf2S3vh8bfGh3b35LEJroZDZat8MLBoK5t6jkjDVyrjR14pW0xbfsekhzdPurFmHwSk3RH9HEd7slQDh8U2i/UElIO5NMEwZAagaMEgNgzvIRo2byd14LDhnOwdOvn+Zbxqafl0vxVFMsQFaVT85S6E5k0GFsoJDGfZb7Gzwosa+QLMpFsL6IVnsY6DTdYXN2RdVDeS0j+oEvqrlW0wig7GazZJrJLaFCSrpS+jtAhyPo42/ymkk4WmR4ZZ8FEjSI5MR/z+dIGaM2EStA/VRl9L+gozKKNI1Cc7VV76d90gn9nMqB9jaVY75ZwpOWd9okjDo6JCWm6WMU3BoDzfA+ByyVq+bZuKsh80emDHjza8SSqIuDQf79wkwu/LRHkyPC5lBynIBHh4JmxMY+5jb5Ps17omv4qkz0CK0tv7zaBbSu1mHDV89jGE1n1vDYIcMnDSJ2FcqLopIGqh6Pu+bvjff5mhM6J3QQkNl7h9KSg5hX4qFy7t9yGqqOD2BRpBT3iWOiNwYDwa7/j4OUoDxVhH
+    properties :
+     x : 11
+     y : 566
+     width : 343
+     height : 65
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes :
+      -
+        code : |1-
+         
+        type : 18
+  -
+    name : What_is_OpenGL15
+    identifier : 0x20ebe48e184f0e46
+    internal_properties : CAAAAAgAAACQ55k2wpxcb0B5aBtXOjWPnsmg/bY+4YG6yhGawPHS8fVj+yaGSVknHqx7FL9dxj8tpub27UwaWXWqYmzpqvZnpGq+kxPSCI8ZVFkPCbrRDCmjU4tyi6k+1nLTwrLjCSQsvzHQaWgtwNFwc/H1Sgg01tiKtjcdDJ38RhRPIxKkCADD4k9NhNxRlnIrji2GiphDU1goOPI3rUKm480dUoqkp0VTtKLp49ioqKwlEP9sgLi/6wmwN/hkDToYEERpFrxtgaVIPRcaxLvPWTREZ+sN9l9gzfYvBP4utRQOewoPCeico7OPrvPdBD+17JHSI4rt2Zgdcggc48+yOpSa5aWHLYKHpEdIx9KR2ZBu5hIX4xCtNG3sXbO76ssuNosb9B4EGCrWuxUzNoH+mn2AuhpGMt5LpHkwa1/YmZE=
+    properties :
+     x : 11
+     y : 548
+     width : 331
+     height : 17
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes :
+      -
+        code : |1-
+         
+        type : 18
+  -
+    name : What_is_OpenGL8
+    identifier : 0x20ebe48e18500e46
+    internal_properties : CAAAAAgAAABcKacq7U+FAmq8p5Mr31LI5a9OeN9BmGdr4z4Fi+u1bxT+3Xw7GtyqtUSVbr0xIn+kT4/h3HZ9kTSKb3qWZ8kCsT8VddKgksUfi0kgAK4z4WWJkTTIiaA0dtMo0iqnzrpxQNdDPnNm7vSFXULjMsSnZSojXo6FfaNv/ze532WNYbvIWRTtfAoZX9PgOA+19HbJhFHG5RzLRB+1zPksJTIXeBSok7Gh+CWmvqe1nFa8hai6EUOc5v+i9aIJPcghae41/7K/7B9lVgqCVNyWvTJKYpMJT6qtVPHp8yI70u3Zmkb4ELAT47xqQIUF039YJuipuzrWLNJ1Dg4XUGLbCsciOAvzvhmL69NfKPJdAW76ECxAz9fL4cbiDk+se5H18EjUrh9YU8ZKEnq7FgAJFadrx93/CxACE4NXjj1HMap0Y1/elSGSGJfUeEyUo7etTywf/E/onCV8ZGv9ldANTNtCADzFwUpnuwxB/hX+iKYZMQctdAjjsncAgy+7e/zm4wBO181fcRse61A+W4xxOxGEuoSOmLBN3/6hHGVhijZw6dW+NzdDoCc=
+    properties :
+     x : 11
+     y : 376
+     width : 404
+     height : 65
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes :
+      -
+        code : |1-
+         
+        type : 18
+  -
+    name : What_is_OpenGL9
+    identifier : 0x20ebe48e18510e46
+    internal_properties : CAAAAAgAAACb/fCSRHklJomyxdv3MQ5JyVZ4crwzqN0BRokkTJu6Pcfe396COFBDebb47NKdVA4AMql+cyqY0q0pJ6VFp5aYmdnAD71T8uFJPqzDBFkOukaqurANNfg8HpowyyUmQud/ZovpKDPpKDKTnxZCKUIaWwR7SabbM4SEOV6Xc+wS70VOpIAIeYHIZh88ru4E02VsKjp0Dm4f0uKH6JDaBN4821zqlVvUMlRi4tT3/0MQZ4JSpu1Y2Ery1sZJUjONEiJEkN1xkU7emHC1yiKcPJEbWQXqmL8rGQFGdoGn7NCh4NtD7zcqV56rpqyjPY72xQszfVgdmLo+IqLjO2TGLrNgaV4wMK4fHk6bFfZ3lpJLiU9pfdBMkXBcc8TCoIAagkWkuoJqosyVuZM=
+    properties :
+     x : 11
+     y : 358
+     width : 331
+     height : 17
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes :
+      -
+        code : |1-
+         
+        type : 18
+  -
+    name : What_is_OpenGL10
+    identifier : 0x20ebe48e185c0e46
+    internal_properties : CAAAAAgAAABEir3SYnmQC4gBAFvay8DcDEmDfyG0oS1sLoEc/ttpK1sMgbE2yCpA6J0suSP7CsisR+5PQCsb4PeaNhrGVIcIDUiHWsAw9QIFwXrJZ+Cl5X73sUZ5IWLK7MsRaZm1lCvOrun2zGXSidgK0nPSK8zlzOMlSlPgKKN1Rybl6Me0dHL8kFQsXa4NFjmnPikiswJZIHix5T7JhRCWJje/eQ5QYbjJFzcOcRIRQ7w6gE8dkGe65m4/yNQCtUFwEfBUcGjOguS3ocbu2VI8CD6UkhOYS/o5hnt/Vka5N97CS7ky7oQDlnylZkvsKr+Zwa4uLtClvQbzerI76vCVewKTxB0WhwEIvPBp+Igwpsag+WhFW0O/L6bwFS8YGoDRfWY5ow==
+    properties :
+     x : 439
+     y : 307
+     width : 158
+     height : 20
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes :
+      -
+        code : |1-
+         
+        type : 18
+  -
+    name : What_is_OpenGL11
+    identifier : 0x20ebe48e185d0e46
+    internal_properties : CAAAAAgAAAAaRXwpLfB/gF38tM+bLSxmpHY0K+HkCSxjPmbUaODakiO3MNxgAJDmWQG+zG2DOWkHlo/eytkuBsk4kQjfWH18LfwEVuPaaqei7lZEamF3kjYWZS87W0ClF4Q2lxIapEBbdhuv7tzAOATxBktJ2St4Y76QT4+dNQhyVRWUqKM23UEq3lnDWoDNjVlJT8CaSA4C4GxD+m06I6Us/wVrpJEcbCB1DZyjAPKAP1UAWETMiLq+LvQC1aHK6vVRR3wNI7qRqNbjrrH3O3VMw0r2B1JsShgTEhZyRcZqFV/IuwCJ7tkNPHw6Y9LChUYvTFxJ3Qg8fXolQAiR+l1IVhXivaYZbLsUpPdS0O5ZpSI0iKyWziEFgm8bu3hbAWrlvnEm
+    properties :
+     x : 439
+     y : 414
+     width : 127
+     height : 20
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes :
+      -
+        code : |1-
+         
+        type : 18
+  -
+    name : The_body_of_the_little_fellow_will_be_textured_with_the_opposite_image
+    identifier : 0x20ebe48e185e0e46
+    internal_properties : CAAAAAgAAACURTVDUoBhyrjwIY4WpFvv7fMYjbUhhb8za3FBp9vPZ8G0OJrChDSRru+X4fhtcknLmAmXl68wnw8j+aaMKTzsY5ftTLwHmVxF3o8Q9S9F71pgS5BkFbcGMCPurbZER4iRCcjjkv9ZVcM3vvNrTh3x4IWrfK3N0qUuk8ovQSWWX+tN4j2r88ZQ7XMPDrTeii+3DbvtEi0kgB4kArD/Gb+2TbuYDhhADBxl/ybCYsK0Z35ggtipno8tpZknuaoPjucx8Sv++yjFOhiZ5n/ex5AZCZoiYJj9/Mb1OM7qJrks7XL6k3QmYSULKhHN0euJoal+Rlci9vyJdOypARkQoERFac6qkpnxbBPkfhVbXlekmr8zjuvznn69xtNTCR9WqWjDDhHkfVB6p2+51r0JDHNr/+Ii9zrVOk5Pt5g0hUGBsOYjY0bb8Forbd1jAk2L993b6EfrWKObOGGP5gfmAIpODPkywi/sqUZVawoTCvo7Zd2tEtt1/j9ONCYTojV5ww==
+    properties :
+     x : 509
+     y : 455
+     width : 289
+     height : 63
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes :
+      -
+        code : |1-
+         
+        type : 18
+  -
+    name : What_is_OpenGL12
+    identifier : 0x20ebe48e185f0e46
+    internal_properties : CAAAAAgAAADuEfMyrTyxBbm9nqCRfFTTrHlNMS0AMIqjYDEvOvcX1z9/WW/xWXkwRPn24RtrTEnU3VWIirkX82Yt30tFP6iajnBo1BcF/7sw9YYlR4vJr2CmYKr+ce8vkXZljDHnYzHrj9CahHiu8qdCGPBQEph5aN0kp+TJSk7g4l9fBk5MYknfE5eNaAy4VNX5AjdF/8TPXnJ0+jDR7xIqnqrMyZbYDZgNptRosfplw8ixAYUhmv0GtpkA6Nqwg6862rv40tZgwJ5Y5GaCz7iCKi+H7L0KeQbhyzZPGIhbp0IB1IfCGAK3Nr/Q9egzvk5eibueHjM+DDxxg6Lim/681m/2kh+g4e0KsPw26B/PoIRKHcdNpCmsD91XUtU=
+    properties :
+     x : 439
+     y : 536
+     width : 114
+     height : 20
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes :
+      -
+        code : |1-
+         
+        type : 18
+  -
+    name : What_is_OpenGL13
+    identifier : 0x20ebe48e18600e46
+    internal_properties : CAAAAAgAAAD8p0a4F3ngyzM57hdTLl76ZDfbqQ8sNA0G3J0ucNIZTaR4lBR+LFtN8dJVbryYhXHmtHBwKUxKFiQnY+F0vL3dbyO00B6NLTscjyci/4/Sboe83JT5AsNUOnMidGZSXIR4z5SoiHtNwxvJ9xoLwqi+CPUelfWZUFBGm6/OrWXbjs8HSE9Jm1q0eeUnTfR+y0Gr3KkpXAzv9se/dhKpvQEWuAVn9bLgEX3SIGDJKgOgChrtLrq6uOgbGORaakRmF9R3zWrVmATS5JthpssSmli08CkRoiDfBjEm4P7tsWnPvvn2slTKHkM1LrOu68o+JyRiwqWQou9miGxZaYlR2aRuf0lL4CnBkyKmjzEADkkEXlHyugEFVVWnuT08KgKh+f9Qb7x+VAiMbf5W
+    properties :
+     x : 583
+     y : 536
+     width : 171
+     height : 20
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes :
+      -
+        code : |1-
+         
+        type : 18
+  -
+    name : What_is_OpenGL14
+    identifier : 0x20ebe48e18520e46
+    internal_properties : CAAAAAgAAAD1jUSwXN3Ffl5f/aSGw09Qt8yKSfS1OOLdNnQqsmJJTHpSURZMXUHYW20b5W06cNhlc8G0tikej421NddyuF2gmOwzlW4NvOB16qbrj+kA2Zt9B7JjkpTeM7wzXoNPxj4IC0HiVU10fHk37PDXS/l94/RrFV3sMVDvLb4Z1EX4wV9LlPiA2CMsxlk0U2KHaJPGnRdSaNJK/G44Dfs3JHIZU0qqJ8W2XsL2CqyauNKDYuoU9NXAAtVhVvimEzS9PMCtuLzGDpOBKwJbsSWXcC/Duvcb4RDKAvKShOJmW2DbDmpafRAZICXImZfG5b41riJAD5CoU2dhWbPiXqKR0F/8VmLvoJdeT6eSwml3sksPXGivx01Hhie4FQO0GpCUvOl8m3y3k08YjMqL8IMKZ67ExKq9J4adijIWxAQJkd6PsuQBw/Tfr5u8rxN4eq5m1/V+YlG4UTVbcwhGopW6wt/wnddtF4kzOSAR+7U/JsWR3w30dA==
+    properties :
+     x : 434
+     y : 1
+     width : 452
+     height : 27
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes :
+      -
+        code : |1-
+         
+        type : 18
+  -
+    name : Shape1
+    identifier : 0x20ebe48e18620e46
+    internal_properties : CAAAAAgAAABFtSnkbfufQYbisVwhbOu1TF/xu4TF0an6rfnI8e4kuf6FHV08E+wTyGEQBd3DHYUvX/4i3f0A4S6i5GlPMaq+lilxCWkKEaDY49Yc254PMdUzqmK1EbI8QTulogmddh3oYA9h/kX7pnV08pMbexFxEbytU6oLcVH/qmbNq/YArxn2mFVIsNWReboNpJ7nchwiXTYdANsnIkqKk5maYMz5HwLynw4DuwDh0r81EJRIHv5L1vYspwlDIPs097U5cwhpttC8WTt9gHQvRXVIyQ1qGCUbnebGvC83deDWynvEtu0qrajqfeeVdgwE
+    properties :
+     x : 430
+     y : 524
+     width : 472
+     height : 2
+    type : 20
+    code_elements :
+     type_code : 32
+     p_codes : []
+  -
+    name : Shape2
+    identifier : 0x20ebe48e18630e46
+    internal_properties : CAAAAAgAAACJhO3zuFMn9rAi0nuZaZI1Rwc+a3KE6E3w473ovFqfEHcNGRhEIZuOJ5R/THJ8sTcm5phwehn3GsTChH1MdxVE58ZRx4ZIWUHxBA/KY+HGuCL9MZJSJUcmHirXw9iaY78N9ybmspegRZrdQ7QWRj+D5ULon2OdRe0KmaggtuZrdrqQhzrYcAyfYiO3zYCQpKkrVMv/8cDZ3ky7pcQKZuxehwiCQI0qsqXB2JMqttBf8mcEwPK/ydJSnGaNC8QFMM2MqbthHjqXE9Ztra+tc3DFDN+MrxtZNL7VEs758q4L4/odOMwGpOh5
+    properties :
+     x : 430
+     y : 405
+     width : 472
+     height : 2
+    type : 20
+    code_elements :
+     type_code : 32
+     p_codes : []
+  -
+    name : Static2
+    identifier : 0x20ebe48e18470e46
+    internal_properties : CAAAAAgAAABGqTN9ptKcUgi9qPE2Qni6MPKG6ef92waxg8FEbH8Ab7YZ3n+PvvRT6ajKEyvfIei7aSi1DrafvXJVOKMDn4Zx9R89gzOUscA3AXZvOFfF75Kb+vCpLB9f49lu5+MXNR4J5lgriDmi2onFIpzSlWLZvRx5zz2rCZsdgSOnw66W/3tkme3uTZjqE16s4wroi9MqYHINmx7VBPZq5Z2yDMbfRKkYSbnMOuWsSWYiKFVFBoCyLwccN+n6G26z2Cx9DLGXX9W8ru0sFwvOxHe9LH1k4kmXwUB1xhPm5eFMMXMU0vKiySU6guIPI4roVzx6SQ40GJhh4Ncn8iXOr5iEnxRHh2ZSqmYxQQbpZCiKVXXifsaSKBnT5DSWvBFjsn8rtP9kZ4ixTgSo1hjsIS3IdVzhkXH2rxm42FlWg8ztmFbLunaONdVh
+    properties :
+     x : 428
+     width : 468
+     height : 648
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes :
+      -
+        code : |1-
+         
+        type : 18
+  -
+    name : STC_TITLE
+    identifier : 0x20ebe48e18640e46
+    internal_properties : CAAAAAgAAAATZBu3Q1+UomHyk6953s4uTZhJvmvzgEj48WnTd/IV7/2xYbKipwXJGBARYoXqdXo4KaG7GEGCuYXpY6HG6PAw+pGJw/a9pK3FOcSH3psthYH9/5oysJbFoO3gBeCpC0pc5ahjVKFjesVFPHY7cmBA6pebJkMdufpeK3WuFulPOg+0AolpD78gH9qiPjb1ABWnQf+ZzmdUaoCj9nHGmnuqumDBSxOLPg3yt+XyLsnv14a1C5xe7WMuG3fT7ivCVkB8VociVein3jZSmuFc1cR1R24ycwznpXmzuD0FDhXZFt0Vl9MLju5T8F4m2iLOtffXjy2p0RMPwzE67Db4hSI0uNWQK3F884A7KwzFLNxFqsmERToRdspKPcLTHwVn4Morgx4wtZG3OJkWkAWIM2xxE58gkd2w6+FZGhI=
+    properties :
+     x : 11
+     y : 7
+     width : 300
+     height : 56
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes :
+      -
+        code : |1-
+         
+        type : 18
+  -
+    name : Image2
+    identifier : 0x20ebe48e185b0e46
+    internal_properties : CAAAAAgAAAAqF5wN9kBTHjkbLWUhywKtCu5sOZ2NqIWee7TbTqx0SA33g2m3YVZSVeTjoepxJvaBcqYqMEkcXNQZajG9SY2mZ/jyeZmLn0nnjcT5wAitAji1p+JsyjTzr9yV5WsmGhy4d79Oi75rE1IBEYJaGCxKMy40on3A+R0CPLlq2BRQbcnHVDrO5+uoKNSItm/olLfc4R4ocitE/GNVbXjDTYM+uQ07VjKaj0ABkqhAzNJ5Upg5ii0zYMw+GdTKxXswl+EkEmIF5Dbek7Ft/bzGHJGcZsbqzrRIZsh1fohf54xIdQRTYWCKJk4q81HiJZl11ymT5sxPbwRa9wV5ZcNVA24oNo4cCkndoSj99xJz9J/TSY/gWvmoJVhyUSdmkYIhxeb3X6cX+T1ZTMN1BGUirk4qfEFlBOlt0DrzOd7ArCrHt0LLBjF37A947+iuvJQ30Rp1zlYfU1bggBmYFum7NV4T2aQUH89kgPLoyqdMunl3TrJS5gSi6FEXIi/XHrS3tFmz/ovBK19WHBA7miNDZzFRqTg0BdO9J8TiI+ApTH+RAc0uQhMDK8fYt45is8fVj32gTi+tgjhBCXH74IkOXMbIX/MROZHtxaF7mH0KKOD82P2Sh+ZOpeKBwaO91IpWJw3hKNUaxucxBmhpgbhy+XCr6jofw0xeZYaufJbN
+    properties :
+     x : 807
+     y : 440
+     width : 64
+     height : 64
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        code : |1+
+         // Select an image
+         sSel is string
+         sSel = fImageSelect(Image2,“”,<§$0000§>,fGraphicFilter())
+         IF sSel<>“” THEN
+         	Image2 = sSel
+         END
+         
+         // Display
+         clOpenGL:Draw()
+         
+         
+        type : 18
+ menu :
+  name : _Menu
+  identifier : 0x293d61f524f75ffe
+  internal_properties : CAAAAAgAAAAoagsXE0xucBO2e0ia94vQrRWSYO17FDggaUaeRKNmgp14OlvHidYQADmCe7JzSJ/iKr5/Bl/WV71r91Q/sDYDdLqwsTKTRz9u6D0iJop7i+W+LJQFAWVumkmWJDkEpFSI/3Isl72sizXgIGa6ceDcVwxLKYotV/mMqpwrFnyD72otbjY33rrJB0BU1QDpjXP/hy2K72XPUh586oOx/dcjilW8iumXoyb12Pn4c9m1zBiqwt5h1BaxnU3jtI9jdwvFT4lDQEH//KnAMHelnxzoooufws/wvKpA
+  options : []
+ languages :
+  - en-GB
+ popup_menus : []
+ message_bar :
+  internal_properties : CAAAAAgAAAD744vS5YZmVyNKluQCQ6fSRFbcqPXg5JVsJA8TxH3UxU+DpygMu8dwsgWWA+DwPa5LuK+/VYf1BtGiTDhJiECTVprNYQf4uLJTzpk058Dzu08falitygfe2oe572dO
+ actionbar : {}
+ code_elements :
+  internal_properties : CAAAAAgAAACvhiIr8gSQ5loUp83uTso9CuLc4dExenO6nYq0wt6wNhhy8DIKk+8xrI7GMink5ce8SLehbaZBjJVyvy60Arg=
+  type_code : 1
+  p_codes :
+   -
+     code : |1-
+      clOpenGL is COpenGL(Image1..Name)
+   -
+     code : |1+
+      // Initialize the control and the OpenGL context
+      IF clOpenGL:InitControl() THEN
+      	// Initialize according to the dimensions of the control
+      	clOpenGL:InitScene()
+      	// Initialize the different parameters (color, depth, lightness, texture)
+      	clOpenGL:InitGL()
+      	
+      	// The scene moves away from the camera
+      	clOpenGL:m_ZTransCamera=-11.0
+      ELSE
+      	Close()
+      END
+      
+      // Drawing of the little fellow
+      ExecuteProcess(BTN_Littlefellow,trtClick)
+     type : 34
+   -
+     type : 180
+     enabled : false
+   -
+     type : 230
+     enabled : false
+   -
+     code : |1-
+      
+     type : 40
+   -
+     type : 11
+   -
+     type : 12
+   -
+     type : 17
+   -
+     code : |1+
+      // Initialize according to the dimensions of the control
+      clOpenGL:InitScene()
+      
+      WinRedraw()
+     type : 13
+   -
+     code : |1-
+      
+     type : 66058
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : FenOpenGL
+resources :
+ string_res :
+  identifier : 0x3d6b7c7e2443e5d7
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+  strings :
+   -
+     text :
+      en-GB : Select an image...
+     index : 0
+custom_note :
+ internal_properties : CAAAAAgAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=
+associated_test :
+ name : TEST_OpenGL.wxt
+rad :
+ internal_properties : CAAAAAgAAABoAN7PLpwJW3EiA7WVZdCA5EwrCA1rvutcDHooMWKe

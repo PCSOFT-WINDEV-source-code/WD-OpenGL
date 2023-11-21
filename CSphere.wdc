@@ -1,0 +1,95 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : CSphere
+ major_version : 28
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x3d49296a23cc6b44
+ internal_properties : CAAAAAgAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  internal_properties : CAAAAAgAAABm4PVFe9JAHaoZ7pWrapr167xJBrSdz0axAnnnfYhOQaaZf6aFmw+87+hdnze0968KI3y7g0wMbri74fT3L3UE/39pGg==
+  type_code : 10
+  p_codes :
+   -
+     code : |1+
+      CSphere is Class
+      	inhérits of CShape
+      	
+      	m_radius is real
+      	m_slices is int
+      	m_stacks is int
+      END
+     type : 131072
+  procedures :
+   -
+     name : Constructor
+     procedure_id : 4416106445696625476
+     type_code : 27
+     code : |1+
+      Procedure Constructor()
+      Constructor CShape()
+     type : 589824
+   -
+     name : Destructor
+     procedure_id : 4416106446611901252
+     type_code : 28
+     code : |1+
+      Procedure Destructor()
+      
+     type : 655360
+   -
+     name : Draw
+     internal_properties : CAAAAAgAAABdiRP01p4tR7idjdatLj1Cv/yEYfxtbSYHyn/V+TzFuS6jaJUqk47zjQlBUSdS27bNK5yzuKF06epL/jzITqf+icKCowVRf5o77FSY6DyC19pMZ+GGmNNC7h4sWJ1EwSaY0RvwK52po12HfoqPwrrl6N1/R+D7q7SXExWamvTTNqaqWpKAKmbrXLh8lsyxGemMKRfq/FSidscT4kL5TQ3wu5Jjdgv8hcLvCTKsXdPQnKI3IeQtQXJb2v9509B+UMSipWVHM3zQ2py2
+     procedure_id : 4416120619152032892
+     type_code : 12
+     code : |1+
+      Procedure VIRTUAL Draw()					
+      
+      // Reposition at the source
+      API(“Opengl32.dll”, “glPushMatrix”)
+      
+      // Create the object
+      obj is int
+      obj = API(“Glu32.dll”, “gluNewQuadric”)       
+      
+      // Movement in the space
+      :Move()      
+      
+      // Color
+      :Colors()       
+      
+      API(“Glu32.dll”, “gluSphere”, obj, :m_radius, :m_slices, :m_stacks)
+      
+      
+      API(“Opengl32.dll”, “glPopMatrix”)
+     type : 458752
+   -
+     name : SetParam
+     procedure_id : 4416140211914301941
+     type_code : 12
+     code : |1+
+      Procedure VIRTUAL SetParam(pnRadius is real=1.0, pnSlices is int=16, pnStacks is int=16) <overload> 
+      // pnRadius: radius 
+      // pnSlices: Number of sub-divisions around the z axis
+      // pnStacks: Number of sub-divisions around the z axis
+      
+      // Properties of the object
+      :m_radius = pnRadius
+      :m_slices = pnSlices
+      :m_stacks = pnStacks
+      
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+resources :
+ string_res :
+  identifier : 0x3d4929670cf85d78
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ
